@@ -1,12 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ajs-value</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- buoc 1. nhung thu vien angularjs theo link CDN vo trang web -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
 </head>
-<body>
-    <a>abc</a>
+
+<body ng-app="myAPP">
+
+    <div class="container">
+        <h3>Value Dependency</h3>
+        <hr>
+        <div ng-controller="myCTRL">
+            <h4>Employee profile</h4>
+            <p>
+                id: {{em.id}} <br>
+                name: {{em.name}}
+            </p>
+        </div>
+
+        <hr>
+
+        <div ng-controller="mySAL">
+            <h4>Pay slip</h4>
+            <p>
+                Basic salary: {{salary}} <br>
+                Worked days : {{workedDays}} <br>
+                Income : {{salary*workedDays/26|number:2}}
+            </p>
+
+        </div>
+
+    </div>
+
+
 </body>
+<script>
+    //khai bao bien dai dien cho ung dung AngularJS
+    let app = angular.module("myAPP", []);
+
+    //khai bao 1 value dai dien cho 1 doi tuong json, mo ta 1 nv
+    app.value('employee',
+        { "id": "E01", "name": "Tu Quang Nam", "salary": 3000, "wdays": 20 });
+
+
+    //lap trinh cho controller myCTRL
+    app.controller('myCTRL', function ($scope, employee) {
+        $scope.em = employee;
+    })
+
+    //lap trinh cho controller mySAL
+    app.controller('mySAL', function ($scope, employee) {
+        $scope.salary = employee.salary;
+        $scope.workedDays = employee.wdays;
+
+    })
+
+</script>
+
 </html>
