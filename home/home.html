@@ -1,0 +1,481 @@
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner carousel--height">
+    <div class="carousel-item active">
+      <img src="img/1.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="img/2.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="img/3.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button> -->
+
+  <div class="contain-box">
+    <div class="box-compare">
+      <div class="box-compare-where">
+        <i class="fa-solid fa-location-dot box-conpare-icon"></i>
+        <input type="text" class="input-where" placeholder="Where To">
+      </div>
+      <div class="box-compare-date">
+        <i class="fa-solid fa-calendar-days box-conpare-icon"></i>
+        <input type="text" class="input-date" placeholder="Start Date">
+      </div>
+      <div class="box-compare-traveler">
+        <i class="fa-solid fa-user-group box-conpare-icon"></i>
+        <input type="text" class="input-traveler" placeholder="Traveler">
+      </div>
+      <button class="box-compare-search">
+        <i class="fa-solid fa-magnifying-glass" style="color: white;"></i>
+      </button>
+    </div>
+
+    <H2 class="group-name" style="width: 190px;">ZOO NEWS</H2>
+    <div>
+      <div class="news-list">
+        <div class="card mb-3 news-item">
+          <div class="row g-0">
+            <div class="col-md-5">
+              <img src="/img/new1.jpg" class="img-fluid rounded-start news-img" alt="...">
+            </div>
+            <div class="col-md-7">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card mb-3 news-item">
+          <div class="row g-0">
+            <div class="col-md-5">
+              <img src="/img/new2.jpg" class="img-fluid rounded-start news-img" alt="...">
+            </div>
+            <div class="col-md-7">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card mb-3 news-item">
+          <div class="row g-0">
+            <div class="col-md-5">
+              <img src="/img/new3.jpg" class="img-fluid rounded-start news-img" alt="...">
+            </div>
+            <div class="col-md-7">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card mb-3 news-item">
+          <div class="row g-0">
+            <div class="col-md-5">
+              <img src="/img/new4.jpg" class="img-fluid rounded-start news-img" alt="...">
+            </div>
+            <div class="col-md-7">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="group-name" style="width: 460px;">TOP RATED SAFARI CONTRIES</h2>
+    <div class="top-rate">
+      <ul class="top-rate-list" ng-controller="addCONTROL">
+        <li class="top-rate-item"><button class="top-rate-btn " onclick="change1()">#1 Tanzania </button></li>
+        <li class="top-rate-item"><button class="top-rate-btn " onclick="change2()">#2 Botswana</button></li>
+        <li class="top-rate-item"><button class="top-rate-btn " onclick="change3()">#3 Zambia</button></li>
+        <li class="top-rate-item"><button class="top-rate-btn " onclick="change4()">#4 Kenya</button></li>
+        <li class="top-rate-item"><button class="top-rate-btn " onclick="change5()">#5 South Africa</button></li>
+        <li class="top-rate-item"><button class="top-rate-btn " onclick="change6()">#6 Namibia</button></li>
+        <li class="top-rate-item"><button class="top-rate-btn " onclick="change7()">#7 Uganda</button></li>
+      </ul>
+
+      <div class="top-rate-info-tour">
+        <div id="tour-info1" class="top-rate-info-box">
+          <div class="header-tour">
+            <h2 class="name-tour">Tanzania</h2>
+            <div class="tour-rate">
+              <div class="stars-tour">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <h4 class="ratio-tour">4,9/5</h4>
+            </div>
+          </div>
+          <div class="content-tour">
+            <p>Tanzania has three safari circuits and each one of them, in its own right, would make Tanzania a top
+              wildlife destination. The popular Northern circuit with the Serengeti and Ngorongoro Crater offers one of
+              the best classical safaris in Africa, especially if timed with the annual wildebeest migration. About
+              Tanzania</p>
+          </div>
+          <div class="icon-tour">
+            <div class="icon-tour-descrip">
+              <i class="fa-solid fa-money-check-dollar"></i>
+              <div class="price-tour">
+                <h4 class="h6" style="margin: 0; line-height: 100%;">Rates (USD)</h4>
+                <p class="p-min" style="margin: 0;">$190 to $556 pp/day</p>
+              </div>
+            </div>
+            <div class="icon-tour-descrip">
+              <i class="fa-solid fa-calendar-check"></i>
+              <div class="time-tour">
+                <h4 class="h6" style="margin: 0; line-height: 100%;">Best Time to Go</h4>
+                <p class="p-min" style="margin: 0;">June to October (Migration from June to July and January to
+                  February)
+                </p>
+              </div>
+            </div>
+            <div class="icon-tour-descrip">
+              <i class="fa-solid fa-coins"></i>
+              <div class="hot-time-tour">
+                <h4 class="h6" style="margin: 0; line-height: 100%;">High Season</h4>
+                <p class="p-min" style="margin: 0;">July to March (Northern circuit parks get crowded)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div id="tour-info2" class="top-rate-info-box">
+          <div class="header-tour">
+            <h2 class="name-tour">Botswana</h2>
+            <div class="tour-rate">
+              <div class="stars-tour">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <h4 class="ratio-tour">4,8/5</h4>
+            </div>
+          </div>
+          <div class="content-tour">
+            <p>Botswana is the leader in low-impact, upmarket tourism in one of Africa’s last wilderness areas. The
+              beauty
+              of the Okavango Delta can be discovered on an unforgettable game drive or exploring by mokoro canoe, while
+              Chobe National Park, Moremi Game Reserve and the Central Kalahari Game Reserve combine stunning landscapes
+              with exceptional wildlife. About Botswana</p>
+          </div>
+          <div class="icon-tour">
+            <div class="icon-tour-descrip">
+              <i class="fa-solid fa-money-check-dollar"></i>
+              <div class="price-tour">
+                <h4 class="h6" style="margin: 0; line-height: 100%;">Rates (USD)</h4>
+                <p class="p-min" style="margin: 0;">$192 to $1,064 pp/day</p>
+              </div>
+            </div>
+            <div class="icon-tour-descrip">
+              <i class="fa-solid fa-calendar-check"></i>
+              <div class="time-tour">
+                <h4 class="h6" style="margin: 0; line-height: 100%;">Best Time to Go</h4>
+                <p class="p-min" style="margin: 0;">Mar to May (Dry parks), Jun to Sep (Okavango, Chobe)</p>
+              </div>
+            </div>
+            <div class="icon-tour-descrip">
+              <i class="fa-solid fa-coins"></i>
+              <div class="hot-time-tour">
+                <h4 class="h6" style="margin: 0; line-height: 100%;">High Season</h4>
+                <p class="p-min" style="margin: 0;">July to October</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div id="tour-info3" class="top-rate-info-box">
+          <div class="header-tour">
+            <h2 class="name-tour">Zambia</h2>
+            <div class="tour-rate">
+              <div class="stars-tour">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <h4 class="ratio-tour">4,6/5</h4>
+            </div>
+          </div>
+          <div class="content-tour">
+            <p>In Zambia, you’ll be looked after on safari by some of the best guides in Africa. They’ll happily share
+              everything they know about the local wildlife and landscape, while safely leading you on game drives,
+              walking safaris and even canoeing safaris along the Zambezi River. About Zambia</p>
+          </div>
+          <div class="icon-tour">
+            <div class="icon-tour-descrip">
+              <i class="fa-solid fa-money-check-dollar"></i>
+              <div class="price-tour">
+                <h4 class="h6" style="margin: 0; line-height: 100%;">Rates (USD)</h4>
+                <p class="p-min" style="margin: 0;">$226 to $1,318 pp/day</p>
+              </div>
+            </div>
+            <div class="icon-tour-descrip">
+              <i class="fa-solid fa-calendar-check"></i>
+              <div class="time-tour">
+                <h4 class="h6" style="margin: 0; line-height: 100%;">Best Time to Go</h4>
+                <p class="p-min" style="margin: 0;">May to September (All parks)</p>
+              </div>
+            </div>
+            <div class="icon-tour-descrip">
+              <i class="fa-solid fa-coins"></i>
+              <div class="hot-time-tour">
+                <h4 class="h6" style="margin: 0; line-height: 100%;">High Season</h4>
+                <p class="p-min" style="margin: 0;">July to October (Not crowded, except Victoria Falls)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="tour-info4" class="top-rate-info-box">
+          <div class="header-tour">
+            <h2 class="name-tour">Kenya</h2>
+            <div class="tour-rate">
+              <div class="stars-tour">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <h4 class="ratio-tour">4,6/5</h4>
+            </div>
+          </div>
+          <div class="content-tour">
+            <p>Kenya is a top wildlife destination, recommended especially for those booking a first-time safari. The
+              Masai Mara National Reserve offers excellent big cat encounters and is the setting for the yearly
+              wildebeest
+              migration. Palm-lined beaches offer a perfect place to relax after an action-packed safari. About Kenya
+            </p>
+          </div>
+          <div class="icon-tour">
+            <div class="icon-tour-descrip">
+              <i class="fa-solid fa-money-check-dollar"></i>
+              <div class="price-tour">
+                <h4 class="h6" style="margin: 0; line-height: 100%;">Rates (USD)</h4>
+                <p class="p-min" style="margin: 0;">$113 to $563 pp/day</p>
+              </div>
+            </div>
+            <div class="icon-tour-descrip">
+              <i class="fa-solid fa-calendar-check"></i>
+              <div class="time-tour">
+                <h4 class="h6" style="margin: 0; line-height: 100%;">Best Time to Go</h4>
+                <p class="p-min" style="margin: 0;">June to October, January to February</p>
+              </div>
+            </div>
+            <div class="icon-tour-descrip">
+              <i class="fa-solid fa-coins"></i>
+              <div class="hot-time-tour">
+                <h4 class="h6" style="margin: 0; line-height: 100%;">High Season</h4>
+                <p class="p-min" style="margin: 0;">July to November, January and February</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="tour-info5" class="top-rate-info-box">
+          <div class="header-tour">
+            <h2 class="name-tour">South Africa</h2>
+            <div class="tour-rate">
+              <div class="stars-tour">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <h4 class="ratio-tour">4,6/5</h4>
+            </div>
+          </div>
+          <div class="content-tour">
+            <p>South Africa is one of Africa’s great wildlife destinations. Vast Kruger National Park has an abundance
+              of
+              animals and is one of the continent's iconic attractions. For outdoor adventure, the Blyde River Canyon is
+              the third largest on the planet, and jagged peaks of the Drakensberg mountains punch into the sky. Cape
+              Town
+              hums with an urban beat, and is fringed by white sandy beaches. About South Africa</p>
+          </div>
+          <div class="icon-tour">
+            <div class="icon-tour-descrip">
+              <i class="fa-solid fa-money-check-dollar"></i>
+              <div class="price-tour">
+                <h4 class="h6" style="margin: 0; line-height: 100%;">Rates (USD)</h4>
+                <p class="p-min" style="margin: 0;">$166 to $692 pp/day</p>
+              </div>
+            </div>
+            <div class="icon-tour-descrip">
+              <i class="fa-solid fa-calendar-check"></i>
+              <div class="time-tour">
+                <h4 class="h6" style="margin: 0; line-height: 100%;">Best Time to Go</h4>
+                <p class="p-min" style="margin: 0;">All parks: May to September, Cape Town: November to March</p>
+              </div>
+            </div>
+            <div class="icon-tour-descrip">
+              <i class="fa-solid fa-coins"></i>
+              <div class="hot-time-tour">
+                <h4 class="h6" style="margin: 0; line-height: 100%;">High Season</h4>
+                <p class="p-min" style="margin: 0;">October to March (Crowded during school holidays)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="tour-info6" class="top-rate-info-box">
+          <div class="header-tour">
+            <h2 class="name-tour">Namibia</h2>
+            <div class="tour-rate">
+              <div class="stars-tour">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <h4 class="ratio-tour">4,5/5</h4>
+            </div>
+          </div>
+          <div class="content-tour">
+            <p>Namibia is characterized by its desert habitat. The harsh environment forms a magnificent backdrop for a
+              different kind of safari. Animal populations are smaller, but sightings in this sparse setting tend to be
+              rewarding. Not to be missed is Etosha Pan, the largest salt pan in Africa and a seasonal wildlife magnet.
+              About Namibia</p>
+          </div>
+          <div class="icon-tour">
+            <div class="icon-tour-descrip">
+              <i class="fa-solid fa-money-check-dollar"></i>
+              <div class="price-tour">
+                <h4 class="h6" style="margin: 0; line-height: 100%;">Rates (USD)</h4>
+                <p class="p-min" style="margin: 0;">$174 to $1,014 pp/day</p>
+              </div>
+            </div>
+            <div class="icon-tour-descrip">
+              <i class="fa-solid fa-calendar-check"></i>
+              <div class="time-tour">
+                <h4 class="h6" style="margin: 0; line-height: 100%;">Best Time to Go</h4>
+                <p class="p-min" style="margin: 0;">June to October (All parks)</p>
+              </div>
+            </div>
+            <div class="icon-tour-descrip">
+              <i class="fa-solid fa-coins"></i>
+              <div class="hot-time-tour">
+                <h4 class="h6" style="margin: 0; line-height: 100%;">High Season</h4>
+                <p class="p-min" style="margin: 0;">July to October (Etosha gets crowded)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="tour-info7" class="top-rate-info-box">
+          <div class="header-tour">
+            <h2 class="name-tour">Uganda</h2>
+            <div class="tour-rate">
+              <div class="stars-tour">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <h4 class="ratio-tour">4,3/5</h4>
+            </div>
+          </div>
+          <div class="content-tour">
+            <p>Uganda is a great destination to view wildlife in both forest and savannah. Not to be missed is gorilla
+              trekking in Bwindi Impenetrable or Mgahinga Gorilla National Parks, while chimps can easily be spotted in
+              Kibale National Park and several other locations. Queen Elizabeth and Murchison Falls National Parks offer
+              wonderful savannah safaris with good wildlife viewing, as does the more remote Kidepo Valley National
+              Park.
+              About Uganda</p>
+          </div>
+          <div class="icon-tour">
+            <div class="icon-tour-descrip">
+              <i class="fa-solid fa-money-check-dollar"></i>
+              <div class="price-tour">
+                <h4 class="h6" style="margin: 0; line-height: 100%;">Rates (USD)</h4>
+                <p class="p-min" style="margin: 0;">$215 to $583 pp/day</p>
+              </div>
+            </div>
+            <div class="icon-tour-descrip">
+              <i class="fa-solid fa-calendar-check"></i>
+              <div class="time-tour">
+                <h4 class="h6" style="margin: 0; line-height: 100%;">Best Time to Go</h4>
+                <p class="p-min" style="margin: 0;">June to August and December to February</p>
+              </div>
+            </div>
+            <div class="icon-tour-descrip">
+              <i class="fa-solid fa-coins"></i>
+              <div class="hot-time-tour">
+                <h4 class="h6" style="margin: 0; line-height: 100%;">High Season</h4>
+                <p class="p-min" style="margin: 0;">June to September (It's rarely crowded)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="team-info">
+      <h2 style="padding-top: 22px; color: white; font-weight: bold;"> THE SCHOOLS INFO FOUNDER </h2>
+    <div class="team-list">
+      <ul class="team-list-list">
+        <li class="team-list-item mem-1" >
+          <img src="/img/4.jpg" alt="" class="mem-img">
+           <p class="mem-name"> <i class="fa-solid fa-address-card"></i> :  Hoàng Ngọc Minh Quý</p> 
+            <p class="mem-phone"> <i class="fa-solid fa-phone"></i> :  0912121212</p>
+              <p class="mem-mail"> <i class="fa-solid fa-envelope"></i> : QuyHNMTS2110007@fpt.edu.vn</p>
+        </li>
+        <li class="team-list-item mem-2" >
+          <img src="/img/4.jpg" alt="" class="mem-img">
+          <p class="mem-name"> <i class="fa-solid fa-address-card"></i> : Nguyễn Đình Đức Huy</p>
+            <p class="mem-phone"> <i class="fa-solid fa-phone"></i> : 0913131313 </p>
+              <p class="mem-mail"> <i class="fa-solid fa-envelope"></i> : HuyNDDTS2110027@fpt.edu.vn</p>
+        </li>
+        <li class="team-list-item mem-3">
+          <img src="/img/4.jpg" alt="" class="mem-img">
+          <p class="mem-name"> <i class="fa-solid fa-address-card"></i> : Huỳnh Nhật Trung</p>
+            <p class="mem-phone"> <i class="fa-solid fa-phone"></i> : 0914141414</p>
+              <p class="mem-mail"> <i class="fa-solid fa-envelope"></i> : TrungHNTS2110025@fpt.edu.vn</p>
+        </li>
+        <li class="team-list-item mem-4">
+          <img src="/img/mem4.jpg" alt="" class="mem-img">
+          <p class="mem-name"> <i class="fa-solid fa-address-card"></i> : Dương Khai Cường</p>
+            <p class="mem-phone"> <i class="fa-solid fa-phone"></i> : 0917171717</p>
+              <p class="mem-mail"> <i class="fa-solid fa-envelope"></i> : CuongDKTS2110027@fpt.edu.vn</p>
+        </li>
+      </ul>
+    </div>
+    </div>
+    
+
+  </div>
+</div>
+
+
+
+</div>
