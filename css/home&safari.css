@@ -369,7 +369,7 @@ table, th, td {
     position: absolute;
     top: 0;
     right: 0;
-    background-image: linear-gradient(0,rgba(0,0,0,9),rgba(0,0,0,0.3)), url(/img/top1.jpg);
+    background-image: linear-gradient(0,rgba(0,0,0,9),rgba(0,0,0,0.3)), url(/image/home/top1.jpg);
     display: block;
     background-size: cover;
 }
@@ -391,7 +391,7 @@ table, th, td {
     position: absolute;
     top: 0;
     right: 0;
-    background-image: linear-gradient(0,rgba(0,0,0,9),rgba(0,0,0,0.3)), url(/img/top2.jpg);
+    background-image: linear-gradient(0,rgba(0,0,0,9),rgba(0,0,0,0.3)), url(/image/home/top2.jpg);
     display: none;
     background-size: cover;
 }
@@ -413,7 +413,7 @@ table, th, td {
     position: absolute;
     top: 0;
     right: 0;
-    background-image: linear-gradient(0,rgba(0,0,0,9),rgba(0,0,0,0.3)), url(/img/top3.jpg);
+    background-image: linear-gradient(0,rgba(0,0,0,9),rgba(0,0,0,0.3)), url(/image/home/top3.jpg);
     display: none;
     background-size: cover;
 }
@@ -434,7 +434,7 @@ table, th, td {
     position: absolute;
     top: 0;
     right: 0;
-    background-image: linear-gradient(0,rgba(0,0,0,9),rgba(0,0,0,0.3)), url(/img/top4.jpg);
+    background-image: linear-gradient(0,rgba(0,0,0,9),rgba(0,0,0,0.3)), url(/image/home/top4.jpg);
     display: none;
     background-size: cover;
 }
@@ -455,7 +455,7 @@ table, th, td {
     position: absolute;
     top: 0;
     right: 0;
-    background-image: linear-gradient(0,rgba(0,0,0,9),rgba(0,0,0,0.3)), url(/img/top5.jpg);
+    background-image: linear-gradient(0,rgba(0,0,0,9),rgba(0,0,0,0.3)), url(/image/home/top5.jpg);
     display: none;
     background-size: cover;
 }
@@ -475,7 +475,7 @@ table, th, td {
     position: absolute;
     top: 0;
     right: 0;
-    background-image: linear-gradient(0,rgba(0,0,0,9),rgba(0,0,0,0.3)), url(/img/top6.jpg);
+    background-image: linear-gradient(0,rgba(0,0,0,9),rgba(0,0,0,0.3)), url(/image/home/top6.jpg);
     display: none;
     background-size: cover;
 }
@@ -496,7 +496,7 @@ table, th, td {
     position: absolute;
     top: 0;
     right: 0;
-    background-image: linear-gradient(0,rgba(0,0,0,9),rgba(0,0,0,0.3)), url(/img/top7.jpg);
+    background-image: linear-gradient(0,rgba(0,0,0,9),rgba(0,0,0,0.3)), url(/image/home/top7.jpg);
     display: none;
     background-size: cover;
 }
@@ -516,7 +516,7 @@ table, th, td {
 .team-info {
     margin-top: 60px;
     margin-bottom: 50px;
-    background-image: url(/img/team.jpg);
+    background-image: url(/image/home/team.jpg);
     background-size: cover;
     width: 100%;
     height: 500px;
