@@ -562,7 +562,8 @@ table, th, td {
 
 .mem-name, .mem-phone , .mem-mail {
     font-size: 13px;
-    margin: 2px 7px;
+    margin: 2px 6px;
+    font-weight: 500;
 }
 
 .mem-1 {
