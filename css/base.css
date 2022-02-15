@@ -1,0 +1,11 @@
+:root {
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --primary-color: rgb(0, 59, 23);
+    --border-color: #dbdbdb;
+
+    --header-height: 120px;
+    --navbar-height: 25px;
+    --search-height: calc(var(--header-height) - var(--navbar-height));
+}
