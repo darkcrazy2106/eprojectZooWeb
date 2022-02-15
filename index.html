@@ -17,7 +17,7 @@
     <!-- AgularJS Route -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.min.js"></script>
 
-
+    safari\safari.html
 
 </head>
 
@@ -128,7 +128,6 @@
 
     </div>
 
-<a href="safari/"></a>
 
     <script>
         let app = angular.module("myAPP", ["ngRoute"]);
@@ -136,15 +135,14 @@
         app.config(function ($routeProvider) {
             $routeProvider
                 .when("/", { templateUrl: "home/home.html" })
-                .when("/gallary", { templateUrl: "gallary.html" })
+                .when("/gallary", { templateUrl: "gallery/GalleryZoo.html" })
                 .when("/safari", { templateUrl: "safari/safari.html" })
-                .when("/feedback", { templateUrl: "feedback.html" })
-                .when("/contact", { templateUrl: "contact.html" })
+                .when("/feedback", { templateUrl: "feedback/feedback.html" })
+                .when("/contact", { templateUrl: "contact/contact.html" })
         });
 
 
-       
-        
+      
         function change1() {
             document.getElementById('tour-info1').style.display = 'block'
             document.getElementById('tour-info2').style.display = 'none'
