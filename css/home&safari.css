@@ -25,7 +25,7 @@
     content: "";
     border-style: solid;
     border-width: 19px 25px;
-    border-color: transparent transparent transparent var(--border-color);
+    border-color: transparent transparent transparent var(--primary-color);
     position: absolute;
     top: 0px;
     left: 100%;
@@ -920,8 +920,9 @@ table, th, td {
 
 .product-card {
     width: 49%;
-    height: 50px;
+    height: auto;
     position: relative;
+    border: 2px solid var(--border-color);
 }
 
 .product-img {
@@ -957,21 +958,26 @@ table, th, td {
     display: flex;
     align-items: center;
     color: var(--primary-color);
-    margin: 8px 0;
+    margin: 8px 10px;
     font-size: 20px;
 }
 
 h4 {
     margin: 0 8px;
-    font-weight: bold;
-}
-p {
-    margin-bottom: 0;
 }
 
-.card-text {
+p {
+    margin-bottom: 0;
+    margin-left: 10px;
+}
+
+
+.card--footer {
+    margin: 12px -44px ;
     display: flex;
+    justify-content: flex-end;
     align-items: center;
+    
 }
 
 /* FOOTER */
