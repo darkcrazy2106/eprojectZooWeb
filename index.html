@@ -213,6 +213,15 @@
         }
 
 
+        // SAFARI
+     
+
+
+            app.run(function($rootScope, $http){
+                $http.get("product.json").then(function(response){
+                    $rootScope.ds= response.data
+                })
+            })
 
     </script>
 
