@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>WebMag HTML Template</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:700%7CNunito:300,600" rel="stylesheet">
+
+    <link type="text/css" rel="stylesheet"
+        href="..\css\event.css" />
+
+    <script>(function (w, d) { !function (a, e, t, r, z) { a.zarazData = a.zarazData || {}, a.zarazData.executed = [], a.zarazData.tracks = [], a.zaraz = { deferred: [] }; var s = e.getElementsByTagName("title")[0]; s && (a.zarazData.t = e.getElementsByTagName("title")[0].text), a.zarazData.w = a.screen.width, a.zarazData.h = a.screen.height, a.zarazData.j = a.innerHeight, a.zarazData.e = a.innerWidth, a.zarazData.l = a.location.href, a.zarazData.r = e.referrer, a.zarazData.k = a.screen.colorDepth, a.zarazData.n = e.characterSet, a.zarazData.o = (new Date).getTimezoneOffset(), a.dataLayer = a.dataLayer || [], a.zaraz.track = (e, t) => { for (key in a.zarazData.tracks.push(e), t) a.zarazData["z_" + key] = t[key] }, a.zaraz._preSet = [], a.zaraz.set = (e, t, r) => { a.zarazData["z_" + e] = t, a.zaraz._preSet.push([e, t, r]) }, a.dataLayer.push({ "zaraz.start": (new Date).getTime() }), a.addEventListener("DOMContentLoaded", (() => { var t = e.getElementsByTagName(r)[0], z = e.createElement(r); z.defer = !0, z.src = "/cdn-cgi/zaraz/s.js?z=" + btoa(encodeURIComponent(JSON.stringify(a.zarazData))), t.parentNode.insertBefore(z, t) })) }(w, d, 0, "script"); })(window, document);</script>
+</head>
+
+<body>
+
+    <header id="header">
+                    <div class="nav-btns">
+                        <button class="aside-btn"><i class="fa fa-bars"></i></button>
+                        <button class="search-btn"><i class="fa fa-search"></i></button>
+                        <div class="search-form">
+                            <input class="search-input" type="text" name="search" placeholder="Enter Your Search ...">
+                            <button class="search-close"><i class="fa fa-times"></i></button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div id="nav-aside">
+
+                <div class="section-row">
+                    <ul class="nav-aside-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#">Join Us</a></li>
+                        <li><a href="#">Advertisement</a></li>
+                        <li><a href="contact.html">Contacts</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="section-row">
+                    <h3>Recent Posts</h3>
+                    <div class="post post-widget">
+                        <a class="post-img" href="blog-post.html"><img
+                                src="data:image/webp;base64,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"
+                                alt="" data-pagespeed-url-hash="3900049921"
+                                onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></a>
+                        <div class="post-body">
+                            <h3 class="post-title"><a href="blog-post.html">Pagedraw UI Builder Turns Your Website
+                                    Design Mockup Into Code Automatically</a></h3>
+                        </div>
+                    </div>
+                    <div class="post post-widget">
+                        <a class="post-img" href="blog-post.html"><img
+                                src="img/xwidget-3.jpg.pagespeed.ic.5z-SP7IbT6.webp" alt=""
+                                data-pagespeed-url-hash="4194549842"
+                                onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></a>
+                        <div class="post-body">
+                            <h3 class="post-title"><a href="blog-post.html">Why Node.js Is The Coolest Kid On The
+                                    Backend Development Block!</a></h3>
+                        </div>
+                    </div>
+                    <div class="post post-widget">
+                        <a class="post-img" href="blog-post.html"><img
+                                src="img/xwidget-4.jpg.pagespeed.ic.i3iWR0f20S.webp" alt=""
+                                data-pagespeed-url-hash="194082467"
+                                onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></a>
+                        <div class="post-body">
+                            <h3 class="post-title"><a href="blog-post.html">Tell-A-Tool: Guide To Web Design And
+                                    Development Tools</a></h3>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="section-row">
+                    <h3>Follow us</h3>
+                    <ul class="nav-aside-social">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                    </ul>
+                </div>
+
+
+                <button class="nav-aside-close"><i class="fa fa-times"></i></button>
+
+            </div>
+
+        </div>
+
+
+        <div id="post-header" class="page-header">
+            <div class="background-img" style="background-image:url(img/xpost-page.jpg.pagespeed.ic.6yBf5KNAup.webp)">
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10">
+                        <div class="post-meta">
+                            <a class="post-category cat-2" href="category.html">JavaScript</a>
+                            <span class="post-date">March 27, 2018</span>
+                        </div>
+                        <h1>Ask HN: Does Anybody Still Use JQuery?</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+
+    <div class="section">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-md-8">
+                    <div class="section-row sticky-container">
+                        <div class="main-post">
+                            <h3>Lorem Ipsum: when, and when not to use it</h3>
+                            <p>Do you like Cheese Whiz? Spray tan? Fake eyelashes? That's what is Lorem Ipsum to many—it
+                                rubs them the wrong way, all the way. It's unreal, uncanny, makes you wonder if
+                                something is wrong, it seems to seek your attention for all the wrong reasons. Usually,
+                                we prefer the real thing, wine without sulfur based preservatives, real butter, not
+                                margarine, and so we'd like our layouts and designs to be filled with real words, with
+                                thoughts that count, information that has value. </p>
+                            <p>The toppings you may chose for that TV dinner pizza slice when you forgot to shop for
+                                foods, the paint you may slap on your face to impress the new boss is your business. But
+                                what about your daily bread? Design comps, layouts, wireframes—will your clients accept
+                                that you go about things the facile way? Authorities in our business will tell in no
+                                uncertain terms that Lorem Ipsum is that huge, huge no no to forswear forever. Not so
+                                fast, I'd say, there are some redeeming factors in favor of greeking text, as its use is
+                                merely the symptom of a worse problem to take into consideration.</p>
+                            <figure class="figure-img">
+                                <img class="img-responsive" src="img/xpost-4.jpg.pagespeed.ic.5tBCPmCJW-.webp" alt=""
+                                    data-pagespeed-url-hash="950850851"
+                                    onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                                <figcaption>So Lorem Ipsum is bad (not necessarily)</figcaption>
+                            </figure>
+                            <p>You begin with a text, you sculpt information, you chisel away what's not needed, you
+                                come to the point, make things clear, add value, you're a content person, you like
+                                words. Design is no afterthought, far from it, but it comes in a deserved second.
+                                Anyway, you still use Lorem Ipsum and rightly so, as it will always have a place in the
+                                web workers toolbox, as things happen, not always the way you like it, not always in the
+                                preferred order. Even if your less into design and more into content strategy you may
+                                find some redeeming value with, wait for it, dummy copy, no less.</p>
+                            <p>There's lot of hate out there for a text that amounts to little more than garbled words
+                                in an old language. The villagers are out there with a vengeance to get that
+                                Frankenstein, wielding torches and pitchforks, wanting to tar and feather it at the
+                                least, running it out of town in shame.</p>
+                            <p>One of the villagers, Kristina Halvorson from Adaptive Path, holds steadfastly to the
+                                notion that design can’t be tested without real content:</p>
+                            <blockquote class="blockquote">
+                                I’ve heard the argument that “lorem ipsum” is effective in wireframing or design because
+                                it helps people focus on the actual layout, or color scheme, or whatever. What kills me
+                                here is that we’re talking about creating a user experience that will (whether we like
+                                it or not) be DRIVEN by words. The entire structure of the page or app flow is FOR THE
+                                WORDS.
+                            </blockquote>
+                            <p>If that's what you think how bout the other way around? How can you evaluate content
+                                without design? No typography, no colors, no layout, no styles, all those things that
+                                convey the important signals that go beyond the mere textual, hierarchies of
+                                information, weight, emphasis, oblique stresses, priorities, all those subtle cues that
+                                also have visual and emotional appeal to the reader. Rigid proponents of content
+                                strategy may shun the use of dummy copy but then designers might want to ask them to
+                                provide style sheets with the copy decks they supply that are in tune with the design
+                                direction they require.</p>
+                            <h3>Summing up, if the copy is diverting attention from the design it’s because it’s not up
+                                to task.</h3>
+                            <p>Typographers of yore didn't come up with the concept of dummy copy because people thought
+                                that content is inconsequential window dressing, only there to be used by designers who
+                                can’t be bothered to read. Lorem Ipsum is needed because words matter, a lot. Just fill
+                                up a page with draft copy about the client’s business and they will actually read it and
+                                comment on it. They will be drawn to it, fiercely. Do it the wrong way and draft copy
+                                can derail your design review.</p>
+                        </div>
+                        <div class="post-shares sticky-shares">
+                            <a href="#" class="share-facebook"><i class="fa fa-facebook"></i></a>
+                            <a href="#" class="share-twitter"><i class="fa fa-twitter"></i></a>
+                            <a href="#" class="share-google-plus"><i class="fa fa-google-plus"></i></a>
+                            <a href="#" class="share-pinterest"><i class="fa fa-pinterest"></i></a>
+                            <a href="#" class="share-linkedin"><i class="fa fa-linkedin"></i></a>
+                            <a href="#"><i class="fa fa-envelope"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="section-row text-center">
+                        <a href="#" style="display: inline-block;margin: auto;">
+                            <img class="img-responsive" src="img/xad-2.jpg.pagespeed.ic.RB_ZDhAXxh.webp" alt=""
+                                data-pagespeed-url-hash="520125700"
+                                onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                        </a>
+                    </div>
+
+
+                    <div class="section-row">
+                        <div class="post-author">
+                            <div class="media">
+                                <div class="media-left">
+                                    <img class="media-object" src="img/xauthor.png.pagespeed.ic.-dOTrKKeTJ.webp" alt=""
+                                        data-pagespeed-url-hash="2096537711"
+                                        onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                                </div>
+                                <div class="media-body">
+                                    <div class="media-heading">
+                                        <h3>John Doe</h3>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                    </p>
+                                    <ul class="author-social">
+                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="section-row">
+                        <div class="section-title">
+                            <h2>3 Comments</h2>
+                        </div>
+                        <div class="post-comments">
+
+                            <div class="media">
+                                <div class="media-left">
+                                    <img class="media-object" src="img/xavatar.png.pagespeed.ic.yoqFUweBw4.webp" alt=""
+                                        data-pagespeed-url-hash="1889391393"
+                                        onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                                </div>
+                                <div class="media-body">
+                                    <div class="media-heading">
+                                        <h4>John Doe</h4>
+                                        <span class="time">March 27, 2018 at 8:00 am</span>
+                                        <a href="#" class="reply">Reply</a>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                    </p>
+
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <img class="media-object" src="img/xavatar.png.pagespeed.ic.yoqFUweBw4.webp"
+                                                alt="" data-pagespeed-url-hash="1889391393"
+                                                onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                                        </div>
+                                        <div class="media-body">
+                                            <div class="media-heading">
+                                                <h4>John Doe</h4>
+                                                <span class="time">March 27, 2018 at 8:00 am</span>
+                                                <a href="#" class="reply">Reply</a>
+                                            </div>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                                commodo consequat.</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                            <div class="media">
+                                <div class="media-left">
+                                    <img class="media-object" src="img/xavatar.png.pagespeed.ic.yoqFUweBw4.webp" alt=""
+                                        data-pagespeed-url-hash="1889391393"
+                                        onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                                </div>
+                                <div class="media-body">
+                                    <div class="media-heading">
+                                        <h4>John Doe</h4>
+                                        <span class="time">March 27, 2018 at 8:00 am</span>
+                                        <a href="#" class="reply">Reply</a>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <div class="section-row">
+                        <div class="section-title">
+                            <h2>Leave a reply</h2>
+                            <p>your email address will not be published. required fields are marked *</p>
+                        </div>
+                        <form class="post-reply">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <span>Name *</span>
+                                        <input class="input" type="text" name="name">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <span>Email *</span>
+                                        <input class="input" type="email" name="email">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <span>Website</span>
+                                        <input class="input" type="text" name="website">
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <textarea class="input" name="message" placeholder="Message"></textarea>
+                                    </div>
+                                    <button class="primary-button">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-4">
+
+                    <div class="aside-widget text-center">
+                        <a href="#" style="display: inline-block;margin: auto;">
+                            <img class="img-responsive"
+                                src="data:image/webp;base64,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"
+                                alt="" data-pagespeed-url-hash="225625779"
+                                onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                        </a>
+                    </div>
+
+
+                    <div class="aside-widget">
+                        <div class="section-title">
+                            <h2>Most Read</h2>
+                        </div>
+                        <div class="post post-widget">
+                            <a class="post-img" href="blog-post.html"><img
+                                    src="img/xwidget-1.jpg.pagespeed.ic.NYJjOYjv_V.webp" alt=""
+                                    data-pagespeed-url-hash="3605550000"
+                                    onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></a>
+                            <div class="post-body">
+                                <h3 class="post-title"><a href="blog-post.html">Tell-A-Tool: Guide To Web Design And
+                                        Development Tools</a></h3>
+                            </div>
+                        </div>
+                        <div class="post post-widget">
+                            <a class="post-img" href="blog-post.html"><img
+                                    src="data:image/webp;base64,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"
+                                    alt="" data-pagespeed-url-hash="3900049921"
+                                    onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></a>
+                            <div class="post-body">
+                                <h3 class="post-title"><a href="blog-post.html">Pagedraw UI Builder Turns Your Website
+                                        Design Mockup Into Code Automatically</a></h3>
+                            </div>
+                        </div>
+                        <div class="post post-widget">
+                            <a class="post-img" href="blog-post.html"><img
+                                    src="img/xwidget-3.jpg.pagespeed.ic.5z-SP7IbT6.webp" alt=""
+                                    data-pagespeed-url-hash="4194549842"
+                                    onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></a>
+                            <div class="post-body">
+                                <h3 class="post-title"><a href="blog-post.html">Why Node.js Is The Coolest Kid On The
+                                        Backend Development Block!</a></h3>
+                            </div>
+                        </div>
+                        <div class="post post-widget">
+                            <a class="post-img" href="blog-post.html"><img
+                                    src="img/xwidget-4.jpg.pagespeed.ic.i3iWR0f20S.webp" alt=""
+                                    data-pagespeed-url-hash="194082467"
+                                    onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></a>
+                            <div class="post-body">
+                                <h3 class="post-title"><a href="blog-post.html">Tell-A-Tool: Guide To Web Design And
+                                        Development Tools</a></h3>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="aside-widget">
+                        <div class="section-title">
+                            <h2>Featured Posts</h2>
+                        </div>
+                        <div class="post post-thumb">
+                            <a class="post-img" href="blog-post.html"><img
+                                    src="img/xpost-2.jpg.pagespeed.ic.DOAToGcDYE.webp" alt=""
+                                    data-pagespeed-url-hash="361851009"
+                                    onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></a>
+                            <div class="post-body">
+                                <div class="post-meta">
+                                    <a class="post-category cat-3" href="#">Jquery</a>
+                                    <span class="post-date">March 27, 2018</span>
+                                </div>
+                                <h3 class="post-title"><a href="blog-post.html">Ask HN: Does Anybody Still Use
+                                        JQuery?</a></h3>
+                            </div>
+                        </div>
+                        <div class="post post-thumb">
+                            <a class="post-img" href="blog-post.html"><img
+                                    src="img/xpost-1.jpg.pagespeed.ic.2GXRfHYjOg.webp" alt=""
+                                    data-pagespeed-url-hash="67351088"
+                                    onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></a>
+                            <div class="post-body">
+                                <div class="post-meta">
+                                    <a class="post-category cat-2" href="#">JavaScript</a>
+                                    <span class="post-date">March 27, 2018</span>
+                                </div>
+                                <h3 class="post-title"><a href="blog-post.html">Chrome Extension Protects Against
+                                        JavaScript-Based CPU Side-Channel Attacks</a></h3>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="aside-widget">
+                        <div class="section-title">
+                            <h2>Catagories</h2>
+                        </div>
+                        <div class="category-widget">
+                            <ul>
+                                <li><a href="#" class="cat-1">Web Design<span>340</span></a></li>
+                                <li><a href="#" class="cat-2">JavaScript<span>74</span></a></li>
+                                <li><a href="#" class="cat-4">JQuery<span>41</span></a></li>
+                                <li><a href="#" class="cat-3">CSS<span>35</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <div class="aside-widget">
+                        <div class="tags-widget">
+                            <ul>
+                                <li><a href="#">Chrome</a></li>
+                                <li><a href="#">CSS</a></li>
+                                <li><a href="#">Tutorial</a></li>
+                                <li><a href="#">Backend</a></li>
+                                <li><a href="#">JQuery</a></li>
+                                <li><a href="#">Design</a></li>
+                                <li><a href="#">Development</a></li>
+                                <li><a href="#">JavaScript</a></li>
+                                <li><a href="#">Website</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <div class="aside-widget">
+                        <div class="section-title">
+                            <h2>Archive</h2>
+                        </div>
+                        <div class="archive-widget">
+                            <ul>
+                                <li><a href="#">January 2018</a></li>
+                                <li><a href="#">Febuary 2018</a></li>
+                                <li><a href="#">March 2018</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <footer id="footer">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="footer-widget">
+                        <div class="footer-logo">
+                            <a href="index.html" class="logo"><img
+                                    src="data:image/webp;base64,UklGRiQCAABXRUJQVlA4TBgCAAAvcUAEEH8gEEgC2l9xhUEZpIlI6DiQG23/2zYvk8F8msDGuctg52z/zwtAG4gbkKUzUKJxTqW8AekJqA2ccwA0gE+JZia/4g8JK0T0fwJWeaD1DiB8zFiSdkgk6S4YeQBrKx9gpAJ2d6r4AnMHCJUH3vuMH0ZRdIukF0VSDaNNq6uUpSrW+kqSrozqwHs5wLDBuI6dbABfHmOkPLCfYiTPGsn2Eg8YrurApJyhHVsVYJrSlwKgJZ2iNa2+CYDJNw9YFjK4yhnpBrhKOdBiJwd9BUCr0H4HLJ8FYGIytHYw0gCepE3jPTlwoDqpqzxmYN5BGGQJe5aK7Ke4Cp6oAWM5aVOHsMMyz/sbGdam5zDaUY1pbIU6YdSBmUpp/2u8P87EYViHsSQFJJLUy2MUyHfVsbZVYTGAuYrsSjGJx7DGsM7EgfHDKIoukvSiaKEaRv5s8ERnrLGKjFQ8ypOA6THeeyzzMK5jJxvA24G1r5FOWst3sK0KM5XS1gf8g25g3pGFVcHIfyJtuvJpK9VjLAeYxrC82YPWuzDINneMfFfyrK20xxyoccj09Qaw+Ohlm1mMVbGGaTu5voJDhr+awHhey7YsWts7eWuuPDCU05IuwyyG96oA+3Iy9WMswJXvqgewpQYj2TGEKgFbylsPoyi6RdKLoqmuH+mJfKutDmZ5iIkBugMsSdohkaSHuSPtq2GtrWJoT6Q7RQ=="
+                                    alt="" data-pagespeed-url-hash="785091163"
+                                    onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></a>
+                        </div>
+                        <ul class="footer-nav">
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Advertisement</a></li>
+                        </ul>
+                        <div class="footer-copyright">
+                            <span>&copy;
+                                Copyright &copy;
+                                <script>document.write(new Date().getFullYear());</script> All rights reserved | This
+                                template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a
+                                    href="https://colorlib.com" target="_blank">Colorlib</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="footer-widget">
+                                <h3 class="footer-title">About Us</h3>
+                                <ul class="footer-links">
+                                    <li><a href="about.html">About Us</a></li>
+                                    <li><a href="#">Join Us</a></li>
+                                    <li><a href="contact.html">Contacts</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="footer-widget">
+                                <h3 class="footer-title">Catagories</h3>
+                                <ul class="footer-links">
+                                    <li><a href="category.html">Web Design</a></li>
+                                    <li><a href="category.html">JavaScript</a></li>
+                                    <li><a href="category.html">Css</a></li>
+                                    <li><a href="category.html">Jquery</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="footer-widget">
+                        <h3 class="footer-title">Join our Newsletter</h3>
+                        <div class="footer-newsletter">
+                            <form>
+                                <input class="input" type="email" name="newsletter" placeholder="Enter your email">
+                                <button class="newsletter-btn"><i class="fa fa-paper-plane"></i></button>
+                            </form>
+                        </div>
+                        <ul class="footer-social">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                            <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js+main.js.pagespeed.jc.XwDhaBFLFp.js"></script>
+    <script>eval(mod_pagespeed_15hy7ra_pu);</script>
+    <script>eval(mod_pagespeed_RDDE5qW6SI);</script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-23581568-13');
+    </script>
+    <script defer
+        src="https://static.cloudflareinsights.com/beacon.min.js/v652eace1692a40cfa3763df669d7439c1639079717194"
+        integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw=="
+        data-cf-beacon='{"rayId":"6dec1759bd5e471b","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2021.12.0","si":100}'
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
