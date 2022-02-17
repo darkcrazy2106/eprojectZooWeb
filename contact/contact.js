@@ -49,23 +49,23 @@ FormContact.onsubmit = function (e) {
 	document.querySelector(".alert_Name_Fillin").innerHTML = vName;
 	document.querySelector(".alert_email_Fillin").innerHTML = vEmail;
 	document.querySelector(".alert_phone_Fillin").innerHTML = vPhone;
-   document.querySelector(".alert_comment_Fillin").innerHTML = vComment;
-   var cAlert = document.querySelector('.cAlert');
-   cAlert.classList.remove('cHide');
-   cAlert.classList.add('cFadeIn');
+  	document.querySelector(".alert_comment_Fillin").innerHTML = vComment;
+   	var cAlert = document.querySelector('.cAlert');
+   	cAlert.classList.remove('cHide');
+   	cAlert.classList.add('cFadeIn');
 };
 
 var cAlert = document.querySelector('.cAlert');
 cAlert.onclick = function () {
-   cAlert.classList.add('cHide');
-   cAlert.classList.remove('cFadeIn');
-   document.querySelector(".alert_Name_Fillin").innerHTML = '';
+	cAlert.classList.add('cHide');
+	cAlert.classList.remove('cFadeIn');
+	document.querySelector(".alert_Name_Fillin").innerHTML = '';
 	document.querySelector(".alert_email_Fillin").innerHTML = '';
 	document.querySelector(".alert_phone_Fillin").innerHTML = '';
-   document.querySelector(".alert_comment_Fillin").innerHTML = '';
-   document.getElementById('vName').value = '';
-   document.getElementById('vEmail').value = '';
-   document.getElementById('vPhone').value = '';
-   document.getElementById('vComment').value = '';
+   	document.querySelector(".alert_comment_Fillin").innerHTML = '';
+  	document.getElementById('vName').value = '';
+   	document.getElementById('vEmail').value = '';
+	document.getElementById('vPhone').value = '';
+   	document.getElementById('vComment').value = '';
 
 }
