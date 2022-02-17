@@ -171,10 +171,10 @@ th {
         box-shadow: none !important
     }
 
-    a,
+    /* a,
     a:visited {
         text-decoration: underline
-    }
+    } */
 
     a[href]:after {
         content: " ("attr(href) ")"
@@ -256,7 +256,7 @@ a {
 a:focus,
 a:hover {
     color: #23527c;
-    text-decoration: underline
+    /* text-decoration: underline */
 }
 
 a:focus {
@@ -1736,12 +1736,12 @@ a {
     text-decoration: none
 }
 
-a:hover,
+/* a:hover,
 a:focus {
     color: #212631;
     text-decoration: underline;
     outline: none
-}
+} */
 
 p {
     margin: 0 0 20px
