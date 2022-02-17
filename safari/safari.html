@@ -35,7 +35,7 @@
                     <div class="home-filter__wrap-1">
                         <span class="home-filter__title">Sorted by</span>
                         <button class="btn btn--primary">Popular</button>
-                        <button class="btn btn--white">Newest</button>
+                        <button class="btn btn--white">Name</button>
                         <button class="btn btn--white">Rate</button>
                         
                         <div class="select-input">
@@ -82,30 +82,37 @@
 
                 <div class="home-product">
                     <div class="row-product">
-                        <div class="product-card">
-                            <img class="product-img" src="/image/home/top1.jpg" alt="Card image cap">
-                            <h2 class="product-name">5-Day Living Among Lions - Mid-Range</h2>
+                        <div ng-repeat="i in ds" class="product-card">
+                            <img class="product-img" src="{{i.url}}" alt="Card image cap">
+                            <h2 class="product-name">{{i.caption}}</h2>
                             <i class="fa-solid fa-paw product-card-icon"></i>
                             <div class="card--body">
                                 <div class="card-price">
-                                    <h4 style="margin-bottom: 0; font-size: 30px;">$1,970 </h4> to <h4 style="margin-bottom: 0; font-size: 30px;"> $2,170 </h4> pp (USD)
+                                    <h4 style="margin: 0 10px 0 0 ; font-size: 30px;">{{i.price}} </h4> pp (USD)
                                 </div>
-                                <p style="margin-bottom: 0; font-size: 18px;"> <b style="font-size: 24px;">Tanzania:</b> Private tour, Mid-rangem, Lodge & Tented Camp</p>
-                                <p style="margin-bottom: 0; font-size: 18px;"> <b style="font-size: 24px;">You Visit:</b> Arusha <i style="color: gray;">(Start)</i> , Lake Manyara NP, Serengeti NP, Ngorongoro Crater, Arusha <i style="color: gray;">(End)</i> Unlimited Expeditions - The Soul</p>
+                                <div class="card--name">{{i.name}}<hr></div>
+                                <p style="margin-bottom: 0; font-size: 18px;"> <b style="font-size: 24px;">You Visit:</b> {{i.description}}</p>
                             </div>
                             <div class="card--footer">
+                                <div class="tour-review">
+                                    <h6 style="margin: 0 4px">{{i.popular}}</h6>reviews
+                                </div>
+
+                                
+
                                 <div class="tour-rate">
                                     <div class="stars-tour">
                                       <i class="fa-solid fa-star"></i>
                                       <i class="fa-solid fa-star"></i>
                                       <i class="fa-solid fa-star"></i>
                                       <i class="fa-solid fa-star"></i>
-                                      <i class="fa-solid fa-star"></i>
+                                      <i class="{{i.star}}"></i>
                                     </div>
-                                    <h4 class="ratio-tour">4,9/5</h4>
+                                    <h4 class="ratio-tour" style="margin: 0;">{{i.rate}}</h4>/5
                                   </div>
                             </div>
                         </div>
+
 
                     </div>
                     

@@ -302,10 +302,24 @@ table, th, td {
     font-size: 45px;
 }
 
+.tour-review {
+    position: absolute;
+    bottom: 12px;
+    left: -30px;
+}
+
 .tour-rate {
     display: flex;
     margin-right: 55px;
+    align-items: center;
+    position: absolute;
+    bottom: 12px;
+    right: -30px;
    
+}
+
+.card--footer {
+    
 }
 
 .stars-tour {
@@ -852,6 +866,7 @@ table, th, td {
     animation: fadein ease 0.5s;
     background-color: var(--white-color);
     border: 1px solid var(--border-color);
+    z-index: 10000;
 
 
 }
@@ -906,7 +921,7 @@ table, th, td {
 .home-product {
  margin: 40px 0;
  width: 100%;
- height: 800px;
+ height: auto;
 
 }
 
@@ -915,18 +930,23 @@ table, th, td {
     justify-content: space-between;
     display: flex;
     width: 100%;
+    flex-wrap: wrap;
    
 }
 
 .product-card {
     width: 49%;
-    height: auto;
+    height: 630px;
     position: relative;
     border: 2px solid var(--border-color);
+    background-color: var(--white-color);
+    margin-bottom: 24px;
 }
 
 .product-img {
     width: 100%;
+    height: 370px;
+    display: flex;
     
 }
 
@@ -971,14 +991,31 @@ p {
     margin-left: 10px;
 }
 
+.card--name {
+    margin: 0 10px;
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
 
 .card--footer {
     margin: 12px -44px ;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     
 }
+
+.tour-review {
+    display: flex;
+    align-items: center;
+    color: gray;
+    margin-left: 50px;
+    font-style: italic;
+
+}
+
+
 
 /* FOOTER */
 footer {

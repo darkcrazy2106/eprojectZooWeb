@@ -209,6 +209,13 @@
             document.getElementById('tour-info7').style.display = 'block'
         }
 
+        
+
+    app.run(function($rootScope, $http){
+        $http.get("product.json").then(function(response){
+        $rootScope.ds= response.data
+        })
+    }) 
     </script>
 
 </body>
