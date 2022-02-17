@@ -276,9 +276,7 @@ table, th, td {
     border-bottom: 1px solid var(--border-color);
 }
 
-.top-rate-info-box {
-   
-}
+
 
 .top-rate-info-tour {
     position: relative;
@@ -318,9 +316,6 @@ table, th, td {
    
 }
 
-.card--footer {
-    
-}
 
 .stars-tour {
     margin: 0 12px;
@@ -678,10 +673,6 @@ table, th, td {
     height: 150px;
     border-radius: 50%;
 }
-.mem-name {
-
-}
-
 
 
 
@@ -970,9 +961,7 @@ table, th, td {
     cursor: pointer;
 }
 
-.card--body {
 
-}
 
 .card-price {
     display: flex;
