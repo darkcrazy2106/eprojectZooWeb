@@ -6,12 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>WebMag HTML Template</title>
+    <title>Content</title>
 
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:700%7CNunito:300,600" rel="stylesheet">
-
-    <link type="text/css" rel="stylesheet"
-        href="..\css\event.css" />
+    <link rel="stylesheet" href="/home/fontawesome-free-6.0.0-web/css/all.min.css">
+    <link type="text/css" rel="stylesheet" href="..\css\event.css" />
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/home&safari.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <script>(function (w, d) { !function (a, e, t, r, z) { a.zarazData = a.zarazData || {}, a.zarazData.executed = [], a.zarazData.tracks = [], a.zaraz = { deferred: [] }; var s = e.getElementsByTagName("title")[0]; s && (a.zarazData.t = e.getElementsByTagName("title")[0].text), a.zarazData.w = a.screen.width, a.zarazData.h = a.screen.height, a.zarazData.j = a.innerHeight, a.zarazData.e = a.innerWidth, a.zarazData.l = a.location.href, a.zarazData.r = e.referrer, a.zarazData.k = a.screen.colorDepth, a.zarazData.n = e.characterSet, a.zarazData.o = (new Date).getTimezoneOffset(), a.dataLayer = a.dataLayer || [], a.zaraz.track = (e, t) => { for (key in a.zarazData.tracks.push(e), t) a.zarazData["z_" + key] = t[key] }, a.zaraz._preSet = [], a.zaraz.set = (e, t, r) => { a.zarazData["z_" + e] = t, a.zaraz._preSet.push([e, t, r]) }, a.dataLayer.push({ "zaraz.start": (new Date).getTime() }), a.addEventListener("DOMContentLoaded", (() => { var t = e.getElementsByTagName(r)[0], z = e.createElement(r); z.defer = !0, z.src = "/cdn-cgi/zaraz/s.js?z=" + btoa(encodeURIComponent(JSON.stringify(a.zarazData))), t.parentNode.insertBefore(z, t) })) }(w, d, 0, "script"); })(window, document);</script>
 </head>
@@ -19,81 +21,71 @@
 <body>
 
     <header id="header">
-                    <div class="nav-btns">
-                        <button class="aside-btn"><i class="fa fa-bars"></i></button>
-                        <button class="search-btn"><i class="fa fa-search"></i></button>
-                        <div class="search-form">
-                            <input class="search-input" type="text" name="search" placeholder="Enter Your Search ...">
-                            <button class="search-close"><i class="fa fa-times"></i></button>
-                        </div>
-                    </div>
 
+        <body ng-app="myAPP">
+            <div class="container" style="margin: 0px; padding: 0px; max-width: 100%;">
+                <div class="header--navbar">
+                    <div header--logo><i class="fa-brands fa-wolf-pack-battalion header--logo-icon"></i></div>
+                    <ul class="navbar--list">
+                        <li class="navbar--item"><a class="nav-link" href="#!gallary">Gallary</a></li>
+                        <li class="navbar--item"><a class="nav-link" href="../../index.html#!/safari/">Safari</a></li>
+                        <li class="navbar--item"><a class="nav-link" href="#/!">Event</a></li>
+                        <li class="navbar--item"><a class="nav-link" href="..\..\index.html">Home</a></li>
+                        <li class="navbar--item"><a class="nav-link" href="..\..\feedback\feedback.html">Feedback</a></li>
+                        <li class="navbar--item"><a class="nav-link" href="..\..\contact\contact.html">Contact </a></li>
+                    </ul>
+                    <div header--login><i class="fa-solid fa-user-large header--login-icon"></i></div>
+                </div>
+
+
+        <div id="nav-aside">
+            <div class="section-row">
+                <h3>Recent Posts</h3>
+                <div class="post post-widget">
+                    <a class="post-img" href="blog-post.html"><img
+                            src="data:image/webp;base64,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"
+                            alt="" data-pagespeed-url-hash="3900049921"
+                            onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></a>
+                    <div class="post-body">
+                        <h3 class="post-title"><a href="blog-post.html">Pagedraw UI Builder Turns Your Website
+                                Design Mockup Into Code Automatically</a></h3>
+                    </div>
+                </div>
+                <div class="post post-widget">
+                    <a class="post-img" href="blog-post.html"><img src="img/xwidget-3.jpg.pagespeed.ic.5z-SP7IbT6.webp"
+                            alt="" data-pagespeed-url-hash="4194549842"
+                            onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></a>
+                    <div class="post-body">
+                        <h3 class="post-title"><a href="blog-post.html">Why Node.js Is The Coolest Kid On The
+                                Backend Development Block!</a></h3>
+                    </div>
+                </div>
+                <div class="post post-widget">
+                    <a class="post-img" href="blog-post.html"><img src="img/xwidget-4.jpg.pagespeed.ic.i3iWR0f20S.webp"
+                            alt="" data-pagespeed-url-hash="194082467"
+                            onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></a>
+                    <div class="post-body">
+                        <h3 class="post-title"><a href="blog-post.html">Tell-A-Tool: Guide To Web Design And
+                                Development Tools</a></h3>
+                    </div>
                 </div>
             </div>
 
 
-            <div id="nav-aside">
-
-                <div class="section-row">
-                    <ul class="nav-aside-menu">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="#">Join Us</a></li>
-                        <li><a href="#">Advertisement</a></li>
-                        <li><a href="contact.html">Contacts</a></li>
-                    </ul>
-                </div>
-
-
-                <div class="section-row">
-                    <h3>Recent Posts</h3>
-                    <div class="post post-widget">
-                        <a class="post-img" href="blog-post.html"><img
-                                src="data:image/webp;base64,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"
-                                alt="" data-pagespeed-url-hash="3900049921"
-                                onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></a>
-                        <div class="post-body">
-                            <h3 class="post-title"><a href="blog-post.html">Pagedraw UI Builder Turns Your Website
-                                    Design Mockup Into Code Automatically</a></h3>
-                        </div>
-                    </div>
-                    <div class="post post-widget">
-                        <a class="post-img" href="blog-post.html"><img
-                                src="img/xwidget-3.jpg.pagespeed.ic.5z-SP7IbT6.webp" alt=""
-                                data-pagespeed-url-hash="4194549842"
-                                onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></a>
-                        <div class="post-body">
-                            <h3 class="post-title"><a href="blog-post.html">Why Node.js Is The Coolest Kid On The
-                                    Backend Development Block!</a></h3>
-                        </div>
-                    </div>
-                    <div class="post post-widget">
-                        <a class="post-img" href="blog-post.html"><img
-                                src="img/xwidget-4.jpg.pagespeed.ic.i3iWR0f20S.webp" alt=""
-                                data-pagespeed-url-hash="194082467"
-                                onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></a>
-                        <div class="post-body">
-                            <h3 class="post-title"><a href="blog-post.html">Tell-A-Tool: Guide To Web Design And
-                                    Development Tools</a></h3>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="section-row">
-                    <h3>Follow us</h3>
-                    <ul class="nav-aside-social">
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-                    </ul>
-                </div>
-
-
-                <button class="nav-aside-close"><i class="fa fa-times"></i></button>
-
+            <div class="section-row">
+                <h3>Follow us</h3>
+                <ul class="nav-aside-social">
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                    <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                </ul>
             </div>
+
+
+            <button class="nav-aside-close"><i class="fa fa-times"></i></button>
+
+        </div>
 
         </div>
 
@@ -483,86 +475,98 @@
         </div>
 
     </div>
+    <!-- Footer -->
+    <footer class="text-center text-white">
+        <!-- Grid container -->
+        <div class="p-4">
+            <!-- Section: Social media -->
+            <section class="mb-4">
+                <!-- Facebook -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-facebook-f"></i></a>
 
+                <!-- Twitter -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-twitter"></i></a>
 
-    <footer id="footer">
+                <!-- Google -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-google"></i></a>
 
-        <div class="container">
+                <!-- Instagram -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-instagram"></i></a>
 
-            <div class="row">
-                <div class="col-md-5">
-                    <div class="footer-widget">
-                        <div class="footer-logo">
-                            <a href="index.html" class="logo"><img
-                                    src="data:image/webp;base64,UklGRiQCAABXRUJQVlA4TBgCAAAvcUAEEH8gEEgC2l9xhUEZpIlI6DiQG23/2zYvk8F8msDGuctg52z/zwtAG4gbkKUzUKJxTqW8AekJqA2ccwA0gE+JZia/4g8JK0T0fwJWeaD1DiB8zFiSdkgk6S4YeQBrKx9gpAJ2d6r4AnMHCJUH3vuMH0ZRdIukF0VSDaNNq6uUpSrW+kqSrozqwHs5wLDBuI6dbABfHmOkPLCfYiTPGsn2Eg8YrurApJyhHVsVYJrSlwKgJZ2iNa2+CYDJNw9YFjK4yhnpBrhKOdBiJwd9BUCr0H4HLJ8FYGIytHYw0gCepE3jPTlwoDqpqzxmYN5BGGQJe5aK7Ke4Cp6oAWM5aVOHsMMyz/sbGdam5zDaUY1pbIU6YdSBmUpp/2u8P87EYViHsSQFJJLUy2MUyHfVsbZVYTGAuYrsSjGJx7DGsM7EgfHDKIoukvSiaKEaRv5s8ERnrLGKjFQ8ypOA6THeeyzzMK5jJxvA24G1r5FOWst3sK0KM5XS1gf8g25g3pGFVcHIfyJtuvJpK9VjLAeYxrC82YPWuzDINneMfFfyrK20xxyoccj09Qaw+Ohlm1mMVbGGaTu5voJDhr+awHhey7YsWts7eWuuPDCU05IuwyyG96oA+3Iy9WMswJXvqgewpQYj2TGEKgFbylsPoyi6RdKLoqmuH+mJfKutDmZ5iIkBugMsSdohkaSHuSPtq2GtrWJoT6Q7RQ=="
-                                    alt="" data-pagespeed-url-hash="785091163"
-                                    onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></a>
+                <!-- Linkedin -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-linkedin-in"></i></a>
+
+                <!-- Github -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-github"></i></a>
+            </section>
+            <!-- Section: Social media -->
+
+            <!-- Section: Form -->
+            <section class="">
+                <form action="">
+                    <!--Grid row-->
+                    <div class="row d-flex justify-content-center">
+                        <!--Grid column-->
+                        <div class="col-auto">
+                            <p class="pt-2">
+                                <strong>Sign up for our newsletter</strong>
+                            </p>
                         </div>
-                        <ul class="footer-nav">
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Advertisement</a></li>
-                        </ul>
-                        <div class="footer-copyright">
-                            <span>&copy;
-                                Copyright &copy;
-                                <script>document.write(new Date().getFullYear());</script> All rights reserved | This
-                                template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a
-                                    href="https://colorlib.com" target="_blank">Colorlib</a>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="footer-widget">
-                                <h3 class="footer-title">About Us</h3>
-                                <ul class="footer-links">
-                                    <li><a href="about.html">About Us</a></li>
-                                    <li><a href="#">Join Us</a></li>
-                                    <li><a href="contact.html">Contacts</a></li>
-                                </ul>
+                        <!--Grid column-->
+
+                        <!--Grid column-->
+                        <div class="col-md-5 col-12">
+                            <!-- Email input -->
+                            <div class="form-outline form-white mb-4">
+                                <input type="email" id="form5Example21" class="form-control"
+                                    placeholder="Email address" />
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="footer-widget">
-                                <h3 class="footer-title">Catagories</h3>
-                                <ul class="footer-links">
-                                    <li><a href="category.html">Web Design</a></li>
-                                    <li><a href="category.html">JavaScript</a></li>
-                                    <li><a href="category.html">Css</a></li>
-                                    <li><a href="category.html">Jquery</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="footer-widget">
-                        <h3 class="footer-title">Join our Newsletter</h3>
-                        <div class="footer-newsletter">
-                            <form>
-                                <input class="input" type="email" name="newsletter" placeholder="Enter your email">
-                                <button class="newsletter-btn"><i class="fa fa-paper-plane"></i></button>
-                            </form>
-                        </div>
-                        <ul class="footer-social">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                            <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+                        <!--Grid column-->
 
+                        <!--Grid column-->
+                        <div class="col-auto">
+                            <!-- Submit button -->
+                            <button type="submit" class="btn btn-outline-light mb-4">
+                                Subscribe
+                            </button>
+                        </div>
+                        <!--Grid column-->
+                    </div>
+                    <!--Grid row-->
+                </form>
+            </section>
+            <!-- Section: Form -->
+
+            <!-- Section: Text -->
+            <section class="mb-4">
+                <p>
+                    TheZoo is the largest online marketplace for African safari tours. Easily compare offers from top
+                    rated tour operators. Make decisions like a pro by using our 65,635 reviews and 216 destination
+                    guides. More About Us
+                </p>
+            </section>
+            <!-- Section: Text -->
+
+            <!-- Section: Links -->
+
+        </div>
+
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2021 Copyright:
+            <a class="text-white" href="" style="text-decoration: none; cursor: none;"> DESIGN BY TEAM 1 T1.2110.E1</a>
         </div>
 
     </footer>
 
-
     <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js+main.js.pagespeed.jc.XwDhaBFLFp.js"></script>
+    <script src="js/event.js"></script>
     <script>eval(mod_pagespeed_15hy7ra_pu);</script>
     <script>eval(mod_pagespeed_RDDE5qW6SI);</script>
 
