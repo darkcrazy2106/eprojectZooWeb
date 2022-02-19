@@ -155,6 +155,7 @@
     display: flex;
     align-items: center;
     border: 2px solid rgba(0, 0, 0 , 0.6 );
+    position: relative;
 }
 .box-compare-date {
     height: 100%;
@@ -201,6 +202,57 @@
     
 }
 
+/* Search bar */
+
+/* .header__search-with-history {
+    position: relative;
+    height: 100%;
+    flex: 10000;
+} */
+
+.input-where:focus ~ .header__search-history {
+    display: block;
+}
+.header__search-history {
+    width: 80%;
+    background-color: white;
+    position: absolute;
+    top: 110%;
+    box-shadow: 0 1px 5px #888;
+    right: 0;
+    border-radius: 2px;
+    padding: 0;
+    overflow: hidden;
+    display: none;
+}
+.header__search-history-list {
+    padding-left: 0;
+    margin: 0;
+}
+.header__search-history-title {
+    font-size: 1.2rem;
+    color: rgb(146, 143, 143);
+    display: block;
+    padding: 8px;
+    text-align: center;
+    font-weight: bold;
+
+}
+.header__search-history-item {
+    font-size: 1.4rem;
+    padding-left: 8px;
+    cursor: pointer;
+    height: 38px;
+    line-height: 38px;
+}
+.header__search-history-item:hover {
+    background-color: rgb(216, 216, 216);
+}
+
+
+
+
+
 /* Menu */
 caption {
     font-weight: bold;
@@ -228,6 +280,11 @@ table, th, td {
 
 .news-item {
     width: 24%;
+
+}
+
+.card-title {
+    cursor: pointer;
 }
 
 .news-img {
@@ -578,7 +635,7 @@ table, th, td {
 .mem-1 {
     border-right: none;
     background-color: rgba(0, 0, 0 , 0.6 );
-    color: var(--text-color);
+    color: var(--white-color);
 }
 
 .mem-1::after {
@@ -927,7 +984,7 @@ table, th, td {
 
 .product-card {
     width: 49%;
-    height: 630px;
+    height: 670px;
     position: relative;
     border: 2px solid var(--border-color);
     background-color: var(--white-color);
