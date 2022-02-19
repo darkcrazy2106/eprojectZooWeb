@@ -4751,3 +4751,11 @@ h3,
 .style-scrollbar-sm {
     height: 100px
 }
+
+
+.gallery-caption {
+    text-align: center;
+    margin: 40px 0;
+    font-weight: bold;
+    color: rgb(0, 59, 23);
+}
