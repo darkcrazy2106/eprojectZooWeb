@@ -163,6 +163,7 @@
     display: flex;
     align-items: center;
     border: 2px solid rgba(0, 0, 0 , 0.6 );
+    position: relative;
 }
 .box-compare-traveler {
     height: 100%;
@@ -170,6 +171,8 @@
     display: flex; 
     align-items: center;   
     border: 2px solid rgba(0, 0, 0 , 0.6 );
+    position: relative;
+
 }
 .box-compare-search {
     height: 100%;
@@ -189,6 +192,7 @@
     width: 80%;
     height: 100%;
     border: none;
+
 }
 .input-traveler {
     width: 80%;
@@ -212,7 +216,11 @@
 
 .input-where:focus ~ .header__search-history {
     display: block;
+    z-index: 100000;
 }
+
+
+
 .header__search-history {
     width: 80%;
     background-color: white;
@@ -644,6 +652,7 @@ table, th, td {
 
 .mem-img {
     margin-bottom: 40px;
+ 
 }
 
 .mem-name, .mem-phone , .mem-mail {
@@ -828,6 +837,7 @@ table, th, td {
     align-items: center;
     border: 2px solid rgba(0, 0, 0 , 0.6 );
     margin: 20px 4px;
+    position: relative;
 } 
 
 
