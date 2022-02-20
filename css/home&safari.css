@@ -283,6 +283,10 @@ table, th, td {
 
 }
 
+.news-item:hover {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
+}
+
 .card-title {
     cursor: pointer;
 }
@@ -294,6 +298,21 @@ table, th, td {
     padding-top: 30px;
     padding-left: 10px;
 }
+
+
+.card-news {
+    height: 300px;
+}
+
+/* Modal */
+.img-new {
+    width: 100%;
+}
+
+.new-body {
+    margin: 30px 4px ;
+}
+
 
 /* Top rate */
 .top-rate {

@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="css/home&safari.css">
     <link rel="stylesheet" href="home/fontawesome-free-6.0.0-web/css/all.min.css">
     <link rel="stylesheet" href="css/base.css">
+
+    <script src="js/zoo.js"></script>
     <meta name="robots" content="noindex, follow">
     <script>(function (w, d) { !function (a, e, t, r, z) { a.zarazData = a.zarazData || {}, a.zarazData.executed = [], a.zarazData.tracks = [], a.zaraz = { deferred: [] }; var s = e.getElementsByTagName("title")[0]; s && (a.zarazData.t = e.getElementsByTagName("title")[0].text), a.zarazData.w = a.screen.width, a.zarazData.h = a.screen.height, a.zarazData.j = a.innerHeight, a.zarazData.e = a.innerWidth, a.zarazData.l = a.location.href, a.zarazData.r = e.referrer, a.zarazData.k = a.screen.colorDepth, a.zarazData.n = e.characterSet, a.zarazData.o = (new Date).getTimezoneOffset(), a.dataLayer = a.dataLayer || [], a.zaraz.track = (e, t) => { for (key in a.zarazData.tracks.push(e), t) a.zarazData["z_" + key] = t[key] }, a.zaraz._preSet = [], a.zaraz.set = (e, t, r) => { a.zarazData["z_" + e] = t, a.zaraz._preSet.push([e, t, r]) }, a.dataLayer.push({ "zaraz.start": (new Date).getTime() }), a.addEventListener("DOMContentLoaded", (() => { var t = e.getElementsByTagName(r)[0], z = e.createElement(r); z.defer = !0, z.src = "/cdn-cgi/zaraz/s.js?z=" + btoa(encodeURIComponent(JSON.stringify(a.zarazData))), t.parentNode.insertBefore(z, t) })) }(w, d, 0, "script"); })(window, document);</script>
     <!-- bootstrap -->
@@ -30,9 +32,9 @@
                 <li class="navbar--item"><a class="nav-link" href="#/!">Home</a></li>
                 <li class="navbar--item"><a class="nav-link" href="gallery/gallery.html">Gallery</a></li>
                 <li class="navbar--item"><a class="nav-link" href="#!safari">Safari</a></li>
-                <li class="navbar--item"><a class="nav-link" href="event\event.html">Event</a></li>  
+                <li class="navbar--item"><a class="nav-link" href="event\event.html">Event</a></li>
                 <li class="navbar--item"><a class="nav-link" href="feedback\feedback.html">Feedback</a></li>
-                <li class="navbar--item"><a class="nav-link" href="contact\contact.html">Contact</a></li>  
+                <li class="navbar--item"><a class="nav-link" href="contact\contact.html">Contact</a></li>
             </ul>
             <div header--login><i class="fa-solid fa-user-large header--login-icon"></i></div>
         </div>
@@ -90,7 +92,8 @@
                             <div class="col-md-5 col-12">
                                 <!-- Email input -->
                                 <div class="form-outline form-white mb-4">
-                                    <input type="email" id="form5Example21" class="form-control" placeholder="Email address" />
+                                    <input type="email" id="form5Example21" class="form-control"
+                                        placeholder="Email address" />
                                 </div>
                             </div>
                             <!--Grid column-->
@@ -112,20 +115,23 @@
                 <!-- Section: Text -->
                 <section class="mb-4">
                     <p>
-                         TheZoo is the largest online marketplace for African safari tours. Easily compare offers from top rated tour operators. Make decisions like a pro by using our 65,635 reviews and 216 destination guides. More About Us
+                        TheZoo is the largest online marketplace for African safari tours. Easily compare offers from
+                        top rated tour operators. Make decisions like a pro by using our 65,635 reviews and 216
+                        destination guides. More About Us
                     </p>
                 </section>
                 <!-- Section: Text -->
 
                 <!-- Section: Links -->
-               
+
             </div>
-    
+
             <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
                 © 2021 Copyright:
-                <a class="text-white" href="" style="text-decoration: none; cursor: none;"> DESIGN BY TEAM 1 T1.2110.E1</a>
+                <a class="text-white" href="" style="text-decoration: none; cursor: none;"> DESIGN BY TEAM 1
+                    T1.2110.E1</a>
             </div>
-     
+
         </footer>
 
     </div>
@@ -133,6 +139,8 @@
 
     <script>
         let app = angular.module("myAPP", ["ngRoute"]);
+
+        // NG-VIEW
 
         app.config(function ($routeProvider) {
             $routeProvider
@@ -143,79 +151,16 @@
                 .when("/contact", { templateUrl: "contact/contact.html" })
         });
 
+        // SAFARI CARD 
 
-      
-        function change1() {
-            document.getElementById('tour-info1').style.display = 'block'
-            document.getElementById('tour-info2').style.display = 'none'
-            document.getElementById('tour-info3').style.display = 'none'
-            document.getElementById('tour-info4').style.display = 'none'
-            document.getElementById('tour-info5').style.display = 'none'
-            document.getElementById('tour-info6').style.display = 'none'
-            document.getElementById('tour-info7').style.display = 'none'
-        }
-        function change2() {
-            document.getElementById('tour-info1').style.display = 'none'
-            document.getElementById('tour-info2').style.display = 'block'
-            document.getElementById('tour-info3').style.display = 'none'
-            document.getElementById('tour-info4').style.display = 'none'
-            document.getElementById('tour-info5').style.display = 'none'
-            document.getElementById('tour-info6').style.display = 'none'
-            document.getElementById('tour-info7').style.display = 'none'
-        }
-        function change3() {
-            document.getElementById('tour-info1').style.display = 'none'
-            document.getElementById('tour-info2').style.display = 'none'
-            document.getElementById('tour-info3').style.display = 'block'
-            document.getElementById('tour-info4').style.display = 'none'
-            document.getElementById('tour-info5').style.display = 'none'
-            document.getElementById('tour-info6').style.display = 'none'
-            document.getElementById('tour-info7').style.display = 'none'
-        }
-        function change4() {
-            document.getElementById('tour-info1').style.display = 'none'
-            document.getElementById('tour-info2').style.display = 'none'
-            document.getElementById('tour-info3').style.display = 'none'
-            document.getElementById('tour-info4').style.display = 'block'
-            document.getElementById('tour-info5').style.display = 'none'
-            document.getElementById('tour-info6').style.display = 'none'
-            document.getElementById('tour-info7').style.display = 'none'
-        }
-        function change5() {
-            document.getElementById('tour-info1').style.display = 'none'
-            document.getElementById('tour-info2').style.display = 'none'
-            document.getElementById('tour-info3').style.display = 'none'
-            document.getElementById('tour-info4').style.display = 'none'
-            document.getElementById('tour-info5').style.display = 'block'
-            document.getElementById('tour-info6').style.display = 'none'
-            document.getElementById('tour-info7').style.display = 'none'
-        }
-        function change6() {
-            document.getElementById('tour-info1').style.display = 'none'
-            document.getElementById('tour-info2').style.display = 'none'
-            document.getElementById('tour-info3').style.display = 'none'
-            document.getElementById('tour-info4').style.display = 'none'
-            document.getElementById('tour-info5').style.display = 'none'
-            document.getElementById('tour-info6').style.display = 'block'
-            document.getElementById('tour-info7').style.display = 'none'
-        }
-        function change7() {
-            document.getElementById('tour-info1').style.display = 'none'
-            document.getElementById('tour-info2').style.display = 'none'
-            document.getElementById('tour-info3').style.display = 'none'
-            document.getElementById('tour-info4').style.display = 'none'
-            document.getElementById('tour-info5').style.display = 'none'
-            document.getElementById('tour-info6').style.display = 'none'
-            document.getElementById('tour-info7').style.display = 'block'
-        }
-
-        
-
-    app.run(function($rootScope, $http){
-        $http.get("product.json").then(function(response){
-        $rootScope.ds= response.data
+        app.run(function ($rootScope, $http) {
+            $http.get("product.json").then(function (response) {
+                $rootScope.ds = response.data
+            })
         })
-    }) 
+
+
+
     </script>
 
 
