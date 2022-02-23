@@ -1,99 +1,110 @@
 <script src="../js/zoo.js"></script>
-  <div class="app__container">
-        <div class="row app-content">
-            <div class="col-sm-3 p-3">
-                <div class="category">
-                    <h3 class="category__heading">
-                        <i class="category__icon fas fa-list"></i>
-                        Your Safari
-                    </h3>
-                    <ul class="category__list">
-                        <li class="category__item category__item--active">
-                          <div class="box-compare-where-1">
+<div class="app__container" ng-controller="myFILTER">
+    <div class="row app-content">
+        <div class="col-sm-3 p-3">
+            <div class="category">
+                <h3 class="category__heading">
+                    <i class="category__icon fas fa-list"></i>
+                    Your Safari
+                </h3>
+                <ul class="category__list">
+                    <li class="category__item category__item--active">
+                        <div class="box-compare-where-1">
                             <i class="fa-solid fa-location-dot box-conpare-icon"></i>
-                            <input type="text" class="input-where" placeholder="Where To">
+
+                            <input type="text" id="inputwhere" value="" placeholder="Where To" class="input-where">
+                            <span style="margin: 0 4px; color: red;">(*)</span>
                             <div class="header__search-history">
                                 <span class="header__search-history-title">Select below</span>
                                 <ul class="header__search-history-list">
-                                    <li class="header__search-history-item">
-                                        <span>Botsawana</span>
+                                    <li class="header__search-history-item" ng-click="changeplace('bot')">
+                                        <span >Botsawana</span>
                                     </li>
-                                    <li class="header__search-history-item">
-                                        <span>Kenya</span>
+                                    <li class="header__search-history-item" ng-click="changeplace('ken')">
+                                        <span >Kenya</span>
                                     </li>
-                                    <li class="header__search-history-item">
-                                      <span>Malawwi</span>
+                                    <li class="header__search-history-item" ng-click="changeplace('mal')">
+                                        <span >Malawi</span>
                                     </li>
-                                    <li class="header__search-history-item">
-                                        <span>Namibia</span>
+                                    <li class="header__search-history-item" ng-click="changeplace('nam')">
+                                        <span >Namibia</span>
                                     </li>
-                                    <li class="header__search-history-item">
-                                      <span>South Africa</span>
+                                    <li class="header__search-history-item" ng-click="changeplace('afr')">
+                                        <span >South Africa</span>
                                     </li>
-                                    <li class="header__search-history-item">
-                                      <span>Tanzania</span>
+                                    <li class="header__search-history-item" ng-click="changeplace('tan')">
+                                        <span >Tanzania</span>
                                     </li>
-                                    <li class="header__search-history-item">
-                                      <span>Uganda</span>
+                                    <li class="header__search-history-item" ng-click="changeplace('uga')">
+                                        <span >Uganda</span>
                                     </li>
-                                    <li class="header__search-history-item">
-                                      <span>Zambia</span>
+                                    <li class="header__search-history-item" ng-click="changeplace('zam')">
+                                        <span >Zambia</span>
                                     </li>
-                                    <li class="header__search-history-item">
-                                      <span>Zimbabwe</span>
+                                    <li class="header__search-history-item" ng-click="changeplace('zim')">
+                                        <span>Zimbabwe</span>
                                     </li>
                                 </ul>
-                              </div>
-                          </div>
-                        </li>
-                        <li class="category__item">
-                          <div class="box-compare-date-1">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="category__item">
+                        <div class="box-compare-date-1">
                             <i class="fa-solid fa-calendar-days box-conpare-icon"></i>
-                            <input type="text" class="input-date" placeholder="Start Date">
-                          </div>
-                        </li>
-                        <li class="category__item">
-                          <div class="box-compare-traveler-1">
+                            <input type="text" class="input-date" onfocus="showCalendarControl(this);" placeholder="Start Date">
+                        </div>
+                    </li>
+                    <li class="category__item">
+                        <div class="box-compare-traveler-1">
                             <i class="fa-solid fa-user-group box-conpare-icon"></i>
                             <input type="text" class="input-traveler" placeholder="Traveler">
-                          </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="col-sm-9 p-3">
-                <div class="home-filter">
-                    <div class="home-filter__wrap-1">
-                        <span class="home-filter__title">Sorted by</span>
-                        <button class="btn btn--primary">Popular</button>
-                        <button class="btn btn--white">Name</button>
-                        <button class="btn btn--white">Rate</button>
-                        
-                        <div class="select-input">
-                            <div class="select-input-price">
-                                <span class="select-input__lable">Price</span>
-                                <i class="fas fa-chevron-down select-input__icon"></i> 
-                            </div>
-                                
-                            <ul class="select-input__list">
-
-                                <li class="select-input__item">
-                                    <a href="" class="select-input__link">Price: Low to High</a>
-                                </li>
-
-                                <li class="select-input__item">
-                                    <a href="" class="select-input__link">Price: High to Low</a>
-                                </li>
-
-                            </ul>
                         </div>
+                    </li>
+                    <li class="category__item">
+                        <button class="box-compare-search-1" ng-click="searchName()">
+                            <i class="fa-solid fa-magnifying-glass" style="color: white;"></i>
+                        </button>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-sm-9 p-3">
+            <div class="home-filter">
+                <div class="home-filter__wrap-1">
+                    <span class="home-filter__title">Sorted by</span>
+                    <button class="btn btn--primary"
+                        ng-click="reverse=!reverse;order('popular', reverse)">Popular</button>
+                    <button class="btn btn--white" ng-click="reverse=!reverse;order('name', reverse)">Name</button>
+                    <button class="btn btn--white" ng-click="reverse=!reverse;order('rate', reverse)">Rate</button>
+
+                    <div class="select-input">
+                        <div class="select-input-price">
+                            <input class="select-input__lable" id="btnprice" type="button" value="Price"></input>
+                            <i class="fas fa-chevron-down select-input__icon"></i>
+                        </div>
+
+                        <ul class="select-input__list">
+
+                            <li class="select-input__item">
+                                <a href="" class="select-input__link"
+                                    ng-click="order('price', reverse);changestatus(1)">Price: Low to High</a>
+                            </li>
+
+                            <li class="select-input__item">
+                                <a href="" class="select-input__link"
+                                    ng-click="order('-price', reverse);changestatus(2)">Price: High to Low</a>
+                            </li>
+
+                        </ul>
                     </div>
+                </div>
 
 
-                    <div class="home-filter__wrap-2">
+                <div class="home-filter__wrap-2">
 
-                        <!-- <div class="home-filter__page">
+                    <!-- <div class="home-filter__page">
                             <span class="home-filter__page-num">
                                 <span class="home-filter__page-current">1</span>
                                 /15
@@ -109,47 +120,50 @@
                                 </a>
                             </div>
                         </div> -->
-                    </div>
-                </div>  
-
-                <div class="home-product">
-                    <div class="row-product">
-                        <div ng-repeat="i in ds" class="product-card">
-                            <img class="product-img" src="{{i.url}}" alt="Card image cap">
-                            <h2 class="product-name">{{i.caption}}</h2>
-                            <i class="fa-solid fa-paw product-card-icon"></i>
-                            <div class="card--body">
-                                <div class="card-price">
-                                    <h4 style="margin: 0 10px 0 0 ; font-size: 30px;">{{i.price}} </h4> pp (USD)
-                                </div>
-                                <div class="card--name">{{i.name}}<hr></div>
-                                <p style="margin-bottom: 0; font-size: 18px;"> <b style="font-size: 24px;">You Visit:</b> {{i.description}}</p>
-                            </div>
-                            <div class="card--footer">
-                                <div class="tour-review">
-                                    <h6 style="margin: 0 4px">{{i.popular}}</h6>reviews
-                                </div>
-
-                                
-
-                                <div class="tour-rate">
-                                    <div class="stars-tour">
-                                      <i class="fa-solid fa-star"></i>
-                                      <i class="fa-solid fa-star"></i>
-                                      <i class="fa-solid fa-star"></i>
-                                      <i class="fa-solid fa-star"></i>
-                                      <i class="{{i.star}}"></i>
-                                    </div>
-                                    <h4 class="ratio-tour" style="margin: 0;">{{i.rate}}</h4>/5
-                                  </div>
-                            </div>
-                        </div>
-
-
-                    </div>
-                    
                 </div>
             </div>
+
+            <div class="home-product">
+                <div class="row-product">
+                    <div ng-repeat="i in ds|filter:ds.selectedItems" class="product-card">
+                        <img class="product-img" src="{{i.url}}" alt="Card image cap">
+                        <h2 class="product-name">{{i.caption}}</h2>
+                        <i class="fa-solid fa-paw product-card-icon"></i>
+                        <div class="card--body">
+                            <div class="card-price">
+                                <h4 style="margin: 0 10px 0 0 ; font-size: 30px;">{{i.price}} </h4> pp (USD)
+                            </div>
+                            <div class="card--name">{{i.name}}
+                                <hr>
+                            </div>
+                            <p style="margin-bottom: 0; font-size: 18px;"> <b style="font-size: 24px;">You Visit:</b>
+                                {{i.description}}</p>
+                        </div>
+                        <div class="card--footer">
+                            <div class="tour-review">
+                                <h6 style="margin: 0 4px">{{i.popular}}</h6>reviews
+                            </div>
+
+
+
+                            <div class="tour-rate">
+                                <div class="stars-tour">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="{{i.star}}"></i>
+                                </div>
+                                <h4 class="ratio-tour" style="margin: 0;">{{i.rate}}</h4>/5
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
         </div>
+    </div>
 
 </div>
