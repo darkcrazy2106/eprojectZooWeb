@@ -991,6 +991,7 @@ table, th, td {
 }
 
 
+
 .select-input:hover .select-input__list{
     display: block;
 }
@@ -1044,6 +1045,8 @@ table, th, td {
 
 }
 
+
+
 .row-product {
     align-items: center;
     justify-content: space-between;
@@ -1088,6 +1091,7 @@ table, th, td {
     color: var(--white-color);
     cursor: pointer;
 }
+
 
 
 

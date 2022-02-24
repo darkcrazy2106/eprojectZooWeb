@@ -18,28 +18,28 @@
                                 <span class="header__search-history-title">Select below</span>
                                 <ul class="header__search-history-list">
                                     <li class="header__search-history-item" ng-click="changeplace('bot')">
-                                        <span >Botsawana</span>
+                                        <span>Botsawana</span>
                                     </li>
                                     <li class="header__search-history-item" ng-click="changeplace('ken')">
-                                        <span >Kenya</span>
+                                        <span>Kenya</span>
                                     </li>
                                     <li class="header__search-history-item" ng-click="changeplace('mal')">
-                                        <span >Malawi</span>
+                                        <span>Malawi</span>
                                     </li>
                                     <li class="header__search-history-item" ng-click="changeplace('nam')">
-                                        <span >Namibia</span>
+                                        <span>Namibia</span>
                                     </li>
                                     <li class="header__search-history-item" ng-click="changeplace('afr')">
-                                        <span >South Africa</span>
+                                        <span>South Africa</span>
                                     </li>
                                     <li class="header__search-history-item" ng-click="changeplace('tan')">
-                                        <span >Tanzania</span>
+                                        <span>Tanzania</span>
                                     </li>
                                     <li class="header__search-history-item" ng-click="changeplace('uga')">
-                                        <span >Uganda</span>
+                                        <span>Uganda</span>
                                     </li>
                                     <li class="header__search-history-item" ng-click="changeplace('zam')">
-                                        <span >Zambia</span>
+                                        <span>Zambia</span>
                                     </li>
                                     <li class="header__search-history-item" ng-click="changeplace('zim')">
                                         <span>Zimbabwe</span>
@@ -51,7 +51,8 @@
                     <li class="category__item">
                         <div class="box-compare-date-1">
                             <i class="fa-solid fa-calendar-days box-conpare-icon"></i>
-                            <input type="text" class="input-date" onfocus="showCalendarControl(this);" placeholder="Start Date">
+                            <input type="text" class="input-date" onfocus="showCalendarControl(this);"
+                                placeholder="Start Date">
                         </div>
                     </li>
                     <li class="category__item">
@@ -128,7 +129,18 @@
                     <div ng-repeat="i in ds|filter:ds.selectedItems" class="product-card">
                         <img class="product-img" src="{{i.url}}" alt="Card image cap">
                         <h2 class="product-name">{{i.caption}}</h2>
-                        <i class="fa-solid fa-paw product-card-icon"></i>
+                        <i class="fa-solid fa-paw product-card-icon" value="den" onclick="if(this.value == 'den')
+                        {
+                           this.style.color = 'rgb(0, 59, 23)';
+                            this.style.borderColor = 'rgb(0, 59, 23)';
+                           this.value = 'trang';
+                   
+                        }
+                        else
+                        {
+                           this.style.color = 'white';
+                            this.style.borderColor = 'white';
+                             this.value = 'den';}" ></i>
                         <div class="card--body">
                             <div class="card-price">
                                 <h4 style="margin: 0 10px 0 0 ; font-size: 30px;">{{i.price}} </h4> pp (USD)
