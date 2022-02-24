@@ -1,5 +1,5 @@
 # Eproject Central Zoo
-The website is ready to be published at https://darkcrazy2106.github.io/eprojectZooWeb/
+
 Project title: CENTRAL Zoo
 
 Class: T1.2110.E1
