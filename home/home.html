@@ -19,47 +19,49 @@
     <span class="visually-hidden">Next</span>
   </button> -->
 
-  <div class="contain-box">
+  <div class="contain-box" ng-controller="myFILTER">
     <div class="box-compare">
       <div class="box-compare-where">
         <i class="fa-solid fa-location-dot box-conpare-icon"></i>
-        <input type="text" class="input-where" placeholder="Where To">
-        <div class="header__search-history">
+        <input type="text" class="input-where" placeholder="Where To" id="inputwhere" >
+        <span style="margin: 0 4px; color: red;">(*)</span>
+        <div class="header__search-history-1">
           <span class="header__search-history-title">Select below</span>
-          <ul class="header__search-history-list">
-              <li class="header__search-history-item">
-                  <span>Botsawana</span>
-              </li>
-              <li class="header__search-history-item">
-                  <span>Kenya</span>
-              </li>
-              <li class="header__search-history-item">
-                <span>Malawwi</span>
-              </li>
-              <li class="header__search-history-item">
-                  <span>Namibia</span>
-              </li>
-              <li class="header__search-history-item">
-                <span>South Africa</span>
-              </li>
-              <li class="header__search-history-item">
-                <span>Tanzania</span>
-              </li>
-              <li class="header__search-history-item">
-                <span>Uganda</span>
-              </li>
-              <li class="header__search-history-item">
-                <span>Zambia</span>
-              </li>
-              <li class="header__search-history-item">
-                <span>Zimbabwe</span>
-              </li>
+          <ul class="header__search-history-list-1">
+            <li class="header__search-history-item" ng-click="changeplace('bot')">
+              <span>Botsawana</span>
+            </li>
+            <li class="header__search-history-item" ng-click="changeplace('ken')">
+              <span>Kenya</span>
+            </li>
+            <li class="header__search-history-item" ng-click="changeplace('mal')">
+              <span>Malawi</span>
+            </li>
+            <li class="header__search-history-item" ng-click="changeplace('nam')">
+              <span>Namibia</span>
+            </li>
+            <li class="header__search-history-item" ng-click="changeplace('afr')">
+              <span>South Africa</span>
+            </li>
+            <li class="header__search-history-item" ng-click="changeplace('tan')">
+              <span>Tanzania</span>
+            </li>
+            <li class="header__search-history-item" ng-click="changeplace('uga')">
+              <span>Uganda</span>
+            </li>
+            <li class="header__search-history-item" ng-click="changeplace('zam')">
+              <span>Zambia</span>
+            </li>
+            <li class="header__search-history-item" ng-click="changeplace('zim')">
+              <span>Zimbabwe</span>
+            </li>
           </ul>
         </div>
       </div>
       <div class="box-compare-date">
         <i class="fa-solid fa-calendar-days box-conpare-icon"></i>
-        <input type="text" name="txtDate" onfocus="showCalendarControl(this);" class="input-date" placeholder="Start Date">
+        <input type="text" name="txtDate" onfocus="showCalendarControl(this);" class="input-date"
+          placeholder="Start Date">
       </div>
       <div class="box-compare-traveler">
         <i class="fa-solid fa-user-group box-conpare-icon"></i>
@@ -80,7 +82,8 @@
             </div>
             <div class="col-md-7">
               <div class="card-body">
-                <h5 class="card-title" data-bs-toggle="modal" data-bs-target="#Modal1">The Movement at Berklee visits Franklin Park Zoo</h5>
+                <h5 class="card-title" data-bs-toggle="modal" data-bs-target="#Modal1">The Movement at Berklee visits
+                  Franklin Park Zoo</h5>
               </div>
             </div>
             <p class="card-text">Berklee students to play music for the animals at Franklin Park Zoo.</p>
@@ -95,21 +98,34 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body new-body">
-                      <div class="row">
-                        <div class="text-new-1 col-md-5">
-                          <p>Berklee College of Music students will be preforming music for the animals that call Franklin Park Zoo home, as part of a collaboration between the Movement at Berklee program and Zoo New England’s Animal Care department. From 1:00 p.m. - 3:00 p.m. on April 9, performances will be held throughout the Zoo in front of various exhibits. The experience will be enriching both for the animals and the guests.</p>
-                        </div>
-                        <div class="col-md-7">
-                          <img class="img-new" src="image/home/new1.jpg" alt="">
-                        </div>
-                        <div class="text-new-2" style="margin-top: 12px;">
-                          <p>“We have been working with The Movement at Berklee for almost 10 years on this project to bring music to the animals,” said Anne Knapp, Zoo New England Director of Animal Resources. “We take a comprehensive look at an animal’s natural history, and find ways to stimulate all of its senses. Many animals at the zoo react to the music by relaxing and watching the musicians, vocalizing or becoming more active by displaying play behavior, and other forms of positive excitement. This form of auditory enrichment benefits the animals as well as our guests.”
-
-                            The Movement at Berklee is a powerful, student-led program that uses music as a catalyst for community building and social change. Student, faculty, staff, and alumni volunteers collaborate with partner organizations to conduct a broad range of activities including youth mentorship, performance outreach, and musical instruction.
-                            
-                            Image courtesy of The Movement at Berklee.</p>
-                        </div>
+                    <div class="row">
+                      <div class="text-new-1 col-md-5">
+                        <p>Berklee College of Music students will be preforming music for the animals that call Franklin
+                          Park Zoo home, as part of a collaboration between the Movement at Berklee program and Zoo New
+                          England’s Animal Care department. From 1:00 p.m. - 3:00 p.m. on April 9, performances will be
+                          held throughout the Zoo in front of various exhibits. The experience will be enriching both
+                          for the animals and the guests.</p>
                       </div>
+                      <div class="col-md-7">
+                        <img class="img-new" src="image/home/new1.jpg" alt="">
+                      </div>
+                      <div class="text-new-2" style="margin-top: 12px;">
+                        <p>“We have been working with The Movement at Berklee for almost 10 years on this project to
+                          bring music to the animals,” said Anne Knapp, Zoo New England Director of Animal Resources.
+                          “We take a comprehensive look at an animal’s natural history, and find ways to stimulate all
+                          of its senses. Many animals at the zoo react to the music by relaxing and watching the
+                          musicians, vocalizing or becoming more active by displaying play behavior, and other forms of
+                          positive excitement. This form of auditory enrichment benefits the animals as well as our
+                          guests.”
+
+                          The Movement at Berklee is a powerful, student-led program that uses music as a catalyst for
+                          community building and social change. Student, faculty, staff, and alumni volunteers
+                          collaborate with partner organizations to conduct a broad range of activities including youth
+                          mentorship, performance outreach, and musical instruction.
+
+                          Image courtesy of The Movement at Berklee.</p>
+                      </div>
+                    </div>
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -128,11 +144,13 @@
             </div>
             <div class="col-md-7">
               <div class="card-body">
-                <h5 class="card-title" data-bs-toggle="modal" data-bs-target="#Modal2">Zoo New England vaccinating animals against COVID-19</h5>
-         
+                <h5 class="card-title" data-bs-toggle="modal" data-bs-target="#Modal2">Zoo New England vaccinating
+                  animals against COVID-19</h5>
+
               </div>
             </div>
-            <p class="card-text">Zoo New England staff has begun vaccinating species susceptible to contracting COVID-19</p>
+            <p class="card-text">Zoo New England staff has begun vaccinating species susceptible to contracting COVID-19
+            </p>
             <p class="card-text"><small class="text-muted">Last updated 2 hours ago</small></p>
 
             <!-- Modal -->
@@ -140,30 +158,54 @@
               <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Zoo New England vaccinating animals against COVID-19</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Zoo New England vaccinating animals against COVID-19
+                    </h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body new-body">
-                      <div class="row">
-                        <div class="text-new-2">
-                          <p>“While we have not had any cases of COVID-19 with the animals at Zoo New England’s Franklin Park Zoo and Stone Zoo, this vaccine is an important preventative health measure to protect species that are susceptible to contracting the virus,” said Dr. Chris Bonar, Senior Veterinarian in Zoo New England’s Animal Health Department.</p>
-                        </div>
-                        <div class="text-new-1 col-md-5">
-                          <p>The vaccine was developed for animals by Zoetis, a global animal health company which has donated more than 11,000 doses to help protect the health and well-being of more than 100 mammalian species living in nearly 70 zoos, as well as other animal care facilities. The vaccine has been authorized on a case-by-case basis by the United States Department of Agriculture and the appropriate state veterinarians. Zoo New England has received approval to administer the vaccines</p>
-                        </div>
-                        <div class="col-md-7">
-                          <img class="img-new" src="image/home/new2.jpg" alt="">
-                        </div>
-                        <div class="text-new-2">
-                          <p>“At Zoo New England, the highest risk species, including primates, felids (cats including lions, tigers and snow leopards) and mustelids (ferrets and North American river otters) will receive the vaccine first. Similar to the vaccine developed for humans, the Zoetis vaccine is administered in two doses, about four weeks apart. It is estimated that it will take three to four months to fully vaccinate all of the at-risk species at Franklin Park Zoo and Stone Zoo.
-
-                            Since the start of the pandemic, the Animal Health team has been staying abreast of the latest scientific literature on animal susceptibility, and is in close contact with veterinary colleagues at other institutions accredited by the Association of Zoos and Aquariums. The team has also implemented changes to procedures to ensure the health and safety of the animals in our care. Preventive measures currently in place include wearing proper protective equipment, masking and social distancing around susceptible species.
-                            
-                            “We are deeply committed to providing exceptional care to all of the animals residing at our zoos. While we do not expect any adverse reactions to the vaccine, nor have any been reported from other zoos, we will be monitoring all of the animals closely for any signs of a vaccine reaction.” Bonar said.
-                            
-                            Zoetis has a long history of supporting zoo veterinarians to help them provide a high standard of care for the animals living in their zoo communities, and is actively working to protect animals worldwide from high-impact emerging diseases. At least 75% of emerging infectious diseases have an animal origin, including COVID-19.</p>
-                        </div>
+                    <div class="row">
+                      <div class="text-new-2">
+                        <p>“While we have not had any cases of COVID-19 with the animals at Zoo New England’s Franklin
+                          Park Zoo and Stone Zoo, this vaccine is an important preventative health measure to protect
+                          species that are susceptible to contracting the virus,” said Dr. Chris Bonar, Senior
+                          Veterinarian in Zoo New England’s Animal Health Department.</p>
                       </div>
+                      <div class="text-new-1 col-md-5">
+                        <p>The vaccine was developed for animals by Zoetis, a global animal health company which has
+                          donated more than 11,000 doses to help protect the health and well-being of more than 100
+                          mammalian species living in nearly 70 zoos, as well as other animal care facilities. The
+                          vaccine has been authorized on a case-by-case basis by the United States Department of
+                          Agriculture and the appropriate state veterinarians. Zoo New England has received approval to
+                          administer the vaccines</p>
+                      </div>
+                      <div class="col-md-7">
+                        <img class="img-new" src="image/home/new2.jpg" alt="">
+                      </div>
+                      <div class="text-new-2">
+                        <p>“At Zoo New England, the highest risk species, including primates, felids (cats including
+                          lions, tigers and snow leopards) and mustelids (ferrets and North American river otters) will
+                          receive the vaccine first. Similar to the vaccine developed for humans, the Zoetis vaccine is
+                          administered in two doses, about four weeks apart. It is estimated that it will take three to
+                          four months to fully vaccinate all of the at-risk species at Franklin Park Zoo and Stone Zoo.
+
+                          Since the start of the pandemic, the Animal Health team has been staying abreast of the latest
+                          scientific literature on animal susceptibility, and is in close contact with veterinary
+                          colleagues at other institutions accredited by the Association of Zoos and Aquariums. The team
+                          has also implemented changes to procedures to ensure the health and safety of the animals in
+                          our care. Preventive measures currently in place include wearing proper protective equipment,
+                          masking and social distancing around susceptible species.
+
+                          “We are deeply committed to providing exceptional care to all of the animals residing at our
+                          zoos. While we do not expect any adverse reactions to the vaccine, nor have any been reported
+                          from other zoos, we will be monitoring all of the animals closely for any signs of a vaccine
+                          reaction.” Bonar said.
+
+                          Zoetis has a long history of supporting zoo veterinarians to help them provide a high standard
+                          of care for the animals living in their zoo communities, and is actively working to protect
+                          animals worldwide from high-impact emerging diseases. At least 75% of emerging infectious
+                          diseases have an animal origin, including COVID-19.</p>
+                      </div>
+                    </div>
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -182,40 +224,59 @@
             </div>
             <div class="col-md-7">
               <div class="card-body">
-                <h5 class="card-title" data-bs-toggle="modal" data-bs-target="#Modal3">A baby sloth is the newest heart-stealer at Stone Zoo!</h5>
+                <h5 class="card-title" data-bs-toggle="modal" data-bs-target="#Modal3">A baby sloth is the newest
+                  heart-stealer at Stone Zoo!</h5>
               </div>
             </div>
             <p class="card-text">Linne’s two-toed sloth born to parents Lunesta and Nero.</p>
             <p class="card-text"><small class="text-muted">Last updated 1 day ago</small></p>
-            
+
             <!-- Modal -->
             <div class="modal fade" id="Modal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
               <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">A baby sloth is the newest heart-stealer at Stone Zoo!</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">A baby sloth is the newest heart-stealer at Stone
+                      Zoo!</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body new-body">
-                      <div class="row">
-                        <div class="text-new-2">
-                          <p>There is slow much to love about the newest addition at Stone Zoo. A tiny Linne’s two-toed sloth baby was born on July 31 to parents Lunesta and Nero.
+                    <div class="row">
+                      <div class="text-new-2">
+                        <p>There is slow much to love about the newest addition at Stone Zoo. A tiny Linne’s two-toed
+                          sloth baby was born on July 31 to parents Lunesta and Nero.
 
-                            The little one appears strong and healthy, and has been observed nursing from Lunesta. Animal care staff has also observed the baby holding on nice and tight to mom.</p>
-                        </div>
-                        <div class="text-new-1 col-md-9">
-                          <p>“Lunesta is an experienced mom who is doing everything she should to care for the baby,” said Pete Costello, Assistant Curator at Stone Zoo. “People are always fascinated by the sloths, and we’re really excited for our guests to watch the baby grow and become more mobile once it’s big enough to explore the habitat. It will stay pretty closely attached to mom for the first few months.”
-
-                            Zoo New England participates in the Linne’s Two-Toed Sloth Species Survival Plan (SSP), which is a cooperative, inter-zoo program coordinated nationally through the Association of Zoos and Aquariums. SSPs help to ensure the survival of selected species in zoos and aquariums, most of which are threatened or endangered, and enhance conservation of these species in the wild. The birth is a result of a recommended breeding between Nero and Lunesta, and this is the fifth offspring for the pair.
-                            
-                            Linne’s two-toed sloths are furry mammals that live in trees and are found in the tropical forests of South America. They spend almost their whole lives dangling upside-down from branches that they hold on to with all four clawed feet. While these animals move really well through the branches, once they are on the ground, they are very slow and vulnerable to predators as they are not built for walking.
-                            
-                            Sloths eat mainly a vegetarian diet of leaves and shoots, and they spend roughly 15 hours a day sleeping. Although they live in trees, sloths are not related to monkeys; rather, their closest relatives are the anteater and the armadillo.</p>
-                        </div>
-                        <div class="col-md-3">
-                          <img class="img-new" src="image/home/new3-1.jpg" alt="">
-                        </div>
+                          The little one appears strong and healthy, and has been observed nursing from Lunesta. Animal
+                          care staff has also observed the baby holding on nice and tight to mom.</p>
                       </div>
+                      <div class="text-new-1 col-md-9">
+                        <p>“Lunesta is an experienced mom who is doing everything she should to care for the baby,” said
+                          Pete Costello, Assistant Curator at Stone Zoo. “People are always fascinated by the sloths,
+                          and we’re really excited for our guests to watch the baby grow and become more mobile once
+                          it’s big enough to explore the habitat. It will stay pretty closely attached to mom for the
+                          first few months.”
+
+                          Zoo New England participates in the Linne’s Two-Toed Sloth Species Survival Plan (SSP), which
+                          is a cooperative, inter-zoo program coordinated nationally through the Association of Zoos and
+                          Aquariums. SSPs help to ensure the survival of selected species in zoos and aquariums, most of
+                          which are threatened or endangered, and enhance conservation of these species in the wild. The
+                          birth is a result of a recommended breeding between Nero and Lunesta, and this is the fifth
+                          offspring for the pair.
+
+                          Linne’s two-toed sloths are furry mammals that live in trees and are found in the tropical
+                          forests of South America. They spend almost their whole lives dangling upside-down from
+                          branches that they hold on to with all four clawed feet. While these animals move really well
+                          through the branches, once they are on the ground, they are very slow and vulnerable to
+                          predators as they are not built for walking.
+
+                          Sloths eat mainly a vegetarian diet of leaves and shoots, and they spend roughly 15 hours a
+                          day sleeping. Although they live in trees, sloths are not related to monkeys; rather, their
+                          closest relatives are the anteater and the armadillo.</p>
+                      </div>
+                      <div class="col-md-3">
+                        <img class="img-new" src="image/home/new3-1.jpg" alt="">
+                      </div>
+                    </div>
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -235,7 +296,8 @@
             </div>
             <div class="col-md-7">
               <div class="card-body">
-                <h5 class="card-title" data-bs-toggle="modal" data-bs-target="#Modal4">Kiwi chick hatches for first time at Franklin Park Zoo</h5>
+                <h5 class="card-title" data-bs-toggle="modal" data-bs-target="#Modal4">Kiwi chick hatches for first time
+                  at Franklin Park Zoo</h5>
               </div>
             </div>
             <p class="card-text">On December 28, a tiny new feathered face greeted the staff at Franklin Park Zoo.</p>
@@ -246,39 +308,70 @@
               <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Kiwi chick hatches for first time at Franklin Park Zoo</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Kiwi chick hatches for first time at Franklin Park
+                      Zoo</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body new-body">
-                      <div class="row">
-                        <div class="text-new-1 col-md-9">
-                          <p>On December 28, a tiny new feathered face greeted the staff at Franklin Park Zoo. The hatch of the male kiwi chick was a first for this species at the Zoo.
+                    <div class="row">
+                      <div class="text-new-1 col-md-9">
+                        <p>On December 28, a tiny new feathered face greeted the staff at Franklin Park Zoo. The hatch
+                          of the male kiwi chick was a first for this species at the Zoo.
 
-                            Since his hatch, the young chick has been strong and thriving. Staff has observed him preening his long brown feathers, and probing his beak into the ground in search of insects, both natural behaviors for kiwis. He is already eating an adult diet consisting of a mixture of vegetables, including corn, carrots and string beans, and meat.
-                            
-                            “We are very pleased with the growth of the chick so far. With all newly hatched birds, you want to make sure that the legs are not splayed, or in an abnormal position. He has nice strong legs in a good stance and has become more active with each day,” said Dr. Brianne Phillips, Zoo New England Associate Veterinarian. “As with any new chick, we are continuing to monitor him closely, but so far he is doing well.”
-                            
-                            The chick will eventually be a mate for Aria, a female adult kiwi at Franklin Park Zoo, although it will be about a year before they are introduced. As a participant in the Kiwi Species Survival Plan, a cooperative, inter-zoo program coordinated nationally through the Association of Zoos and Aquariums (AZA), it is hoped that eventually Aria and the new male will have offspring of their own.
-                            
-                            The egg was transported to Franklin Park Zoo by Ed O’Brien, Assistant Curator of Birds World. O’Brien picked up the egg, which had already been sexed and identified as a male, from the Smithsonian Conservation Biology Institute in Front Royal, Virginia.
-                            
-                            “The Animal Care team has been attentively caring for this little chick, and is now weighing him twice daily to ensure that he is gaining weight and growing stronger each day. This is an incredibly exciting hatch, and as long as he continues to thrive we expect him to make his exhibit debut within a few weeks,” said O’Brien.
-                            
-                            Because kiwis are nocturnal, great care is taken within their exhibit to shine just the right amount of light so visitors can best observe their natural behaviors. By utilizing a reverse light cycle, visitors have the unique opportunity watch these birds as they forage and explore their exhibit.</p>
-                        </div>
-                        <div class="col-md-3">
-                          <img class="img-new" src="image/home/new4-1.jpg" alt="">
-                        </div>
-                        <div class="text-new-2">
-                          <p>Franklin Park Zoo is the only zoo in New England, and one of 10 institutions in North America, to exhibit brown kiwis, classified as vulnerable by the International Union for Conservation of Nature and Natural Resources.
+                          Since his hatch, the young chick has been strong and thriving. Staff has observed him preening
+                          his long brown feathers, and probing his beak into the ground in search of insects, both
+                          natural behaviors for kiwis. He is already eating an adult diet consisting of a mixture of
+                          vegetables, including corn, carrots and string beans, and meat.
 
-                            Kiwis, the national symbol of New Zealand, are flightless and are about the size of a domestic chicken. The kiwi is known for laying the largest egg in proportion to its body size, generally about 20 percent of the body weight of the female. The eggs are incubated for 75 to 90 days, one of longest incubation periods of any bird species.
-                            
-                            Chicks hatch with open eyes and the ability to feed themselves. Unlike most other birds, neither parent feeds the chick. The chick remains in the burrow for 2 to 5 days living off of the retained yolk during the hatching process. From this point on, the chicks are fully self-sufficient.
-                            
-                            While kiwi do not have great vision they do have a keen sense of smell and hearing which they rely on for locating and consuming insects and worms, which makes up the bulk of their diet in the wild.</p>
-                        </div>
+                          “We are very pleased with the growth of the chick so far. With all newly hatched birds, you
+                          want to make sure that the legs are not splayed, or in an abnormal position. He has nice
+                          strong legs in a good stance and has become more active with each day,” said Dr. Brianne
+                          Phillips, Zoo New England Associate Veterinarian. “As with any new chick, we are continuing to
+                          monitor him closely, but so far he is doing well.”
+
+                          The chick will eventually be a mate for Aria, a female adult kiwi at Franklin Park Zoo,
+                          although it will be about a year before they are introduced. As a participant in the Kiwi
+                          Species Survival Plan, a cooperative, inter-zoo program coordinated nationally through the
+                          Association of Zoos and Aquariums (AZA), it is hoped that eventually Aria and the new male
+                          will have offspring of their own.
+
+                          The egg was transported to Franklin Park Zoo by Ed O’Brien, Assistant Curator of Birds World.
+                          O’Brien picked up the egg, which had already been sexed and identified as a male, from the
+                          Smithsonian Conservation Biology Institute in Front Royal, Virginia.
+
+                          “The Animal Care team has been attentively caring for this little chick, and is now weighing
+                          him twice daily to ensure that he is gaining weight and growing stronger each day. This is an
+                          incredibly exciting hatch, and as long as he continues to thrive we expect him to make his
+                          exhibit debut within a few weeks,” said O’Brien.
+
+                          Because kiwis are nocturnal, great care is taken within their exhibit to shine just the right
+                          amount of light so visitors can best observe their natural behaviors. By utilizing a reverse
+                          light cycle, visitors have the unique opportunity watch these birds as they forage and explore
+                          their exhibit.</p>
                       </div>
+                      <div class="col-md-3">
+                        <img class="img-new" src="image/home/new4-1.jpg" alt="">
+                      </div>
+                      <div class="text-new-2">
+                        <p>Franklin Park Zoo is the only zoo in New England, and one of 10 institutions in North
+                          America, to exhibit brown kiwis, classified as vulnerable by the International Union for
+                          Conservation of Nature and Natural Resources.
+
+                          Kiwis, the national symbol of New Zealand, are flightless and are about the size of a domestic
+                          chicken. The kiwi is known for laying the largest egg in proportion to its body size,
+                          generally about 20 percent of the body weight of the female. The eggs are incubated for 75 to
+                          90 days, one of longest incubation periods of any bird species.
+
+                          Chicks hatch with open eyes and the ability to feed themselves. Unlike most other birds,
+                          neither parent feeds the chick. The chick remains in the burrow for 2 to 5 days living off of
+                          the retained yolk during the hatching process. From this point on, the chicks are fully
+                          self-sufficient.
+
+                          While kiwi do not have great vision they do have a keen sense of smell and hearing which they
+                          rely on for locating and consuming insects and worms, which makes up the bulk of their diet in
+                          the wild.</p>
+                      </div>
+                    </div>
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -630,39 +723,39 @@
         </div>
       </div>
     </div>
-   
+
     <div class="team-info">
       <h2 style="padding-top: 22px; color: white; font-weight: bold;"> THE SCHOOLS INFO FOUNDER </h2>
-    <div class="team-list">
-      <ul class="team-list-list">
-        <li class="team-list-item mem-1" >
-          <img src="image/home/mem1.jpg" alt="" class="mem-img">
-           <p class="mem-name"> <i class="fa-solid fa-address-card"></i> :  Hoàng Ngọc Minh Quý</p> 
-            <p class="mem-phone"> <i class="fa-solid fa-phone"></i> :  0912121212</p>
-              <p class="mem-mail"> <i class="fa-solid fa-envelope"></i> : QuyHNMTS2110007@fpt.edu.vn</p>
-        </li>
-        <li class="team-list-item mem-2" >
-          <img src="image/home/mem2.jpg" alt="" class="mem-img">
-          <p class="mem-name"> <i class="fa-solid fa-address-card"></i> : Nguyễn Đình Đức Huy</p>
+      <div class="team-list">
+        <ul class="team-list-list">
+          <li class="team-list-item mem-1">
+            <img src="image/home/mem1.jpg" alt="" class="mem-img">
+            <p class="mem-name"> <i class="fa-solid fa-address-card"></i> : Hoàng Ngọc Minh Quý</p>
+            <p class="mem-phone"> <i class="fa-solid fa-phone"></i> : 0912121212</p>
+            <p class="mem-mail"> <i class="fa-solid fa-envelope"></i> : QuyHNMTS2110007@fpt.edu.vn</p>
+          </li>
+          <li class="team-list-item mem-2">
+            <img src="image/home/mem2.jpg" alt="" class="mem-img">
+            <p class="mem-name"> <i class="fa-solid fa-address-card"></i> : Nguyễn Đình Đức Huy</p>
             <p class="mem-phone"> <i class="fa-solid fa-phone"></i> : 0913131313 </p>
-              <p class="mem-mail"> <i class="fa-solid fa-envelope"></i> : HuyNDDTS2110027@fpt.edu.vn</p>
-        </li>
-        <li class="team-list-item mem-3">
-          <img src="image/home/mem3.jpg" alt="" class="mem-img">
-          <p class="mem-name"> <i class="fa-solid fa-address-card"></i> : Huỳnh Nhật Trung</p>
+            <p class="mem-mail"> <i class="fa-solid fa-envelope"></i> : HuyNDDTS2110027@fpt.edu.vn</p>
+          </li>
+          <li class="team-list-item mem-3">
+            <img src="image/home/mem3.jpg" alt="" class="mem-img">
+            <p class="mem-name"> <i class="fa-solid fa-address-card"></i> : Huỳnh Nhật Trung</p>
             <p class="mem-phone"> <i class="fa-solid fa-phone"></i> : 0914141414</p>
-              <p class="mem-mail"> <i class="fa-solid fa-envelope"></i> : TrungHNTS2110025@fpt.edu.vn</p>
-        </li>
-        <li class="team-list-item mem-4">
-          <img src="image/home/mem4.jpg" alt="" class="mem-img">
-          <p class="mem-name"> <i class="fa-solid fa-address-card"></i> : Dương Khai Cường</p>
+            <p class="mem-mail"> <i class="fa-solid fa-envelope"></i> : TrungHNTS2110025@fpt.edu.vn</p>
+          </li>
+          <li class="team-list-item mem-4">
+            <img src="image/home/mem4.jpg" alt="" class="mem-img">
+            <p class="mem-name"> <i class="fa-solid fa-address-card"></i> : Dương Khai Cường</p>
             <p class="mem-phone"> <i class="fa-solid fa-phone"></i> : 0917171717</p>
-              <p class="mem-mail"> <i class="fa-solid fa-envelope"></i> : CuongDKTS2110027@fpt.edu.vn</p>
-        </li>
-      </ul>
+            <p class="mem-mail"> <i class="fa-solid fa-envelope"></i> : CuongDKTS2110027@fpt.edu.vn</p>
+          </li>
+        </ul>
+      </div>
     </div>
-    </div>
-    
+
 
   </div>
 </div>

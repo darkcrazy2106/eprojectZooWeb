@@ -214,6 +214,11 @@
     flex: 10000;
 } */
 
+.box-compare-where:hover .header__search-history-1 {
+    display: block;
+    z-index: 100000;
+    cursor: pointer;
+}
 .box-compare-where-1:hover .header__search-history {
     display: block;
     z-index: 100000;
@@ -221,7 +226,18 @@
 }
 
 
-
+.header__search-history-1 {
+    width: 80%;
+    background-color: white;
+    position: absolute;
+    top: 104%;
+    box-shadow: 0 1px 5px #888;
+    right: 0;
+    border-radius: 2px;
+    padding: 0;
+    overflow: hidden;
+    display: none;
+}
 .header__search-history {
     width: 80%;
     background-color: white;
@@ -238,6 +254,7 @@
     padding-left: 0;
     margin: 0;
 }
+
 .header__search-history-title {
     font-size: 1.2rem;
     color: rgb(146, 143, 143);
