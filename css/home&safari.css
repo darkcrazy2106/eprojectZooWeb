@@ -122,6 +122,11 @@
 
 
 
+.login-icon {
+    cursor: pointer;
+
+}
+
 /* NG-VIEW */
 
 .fix-center {
@@ -296,7 +301,12 @@ table, th, td {
     padding: 0 5%;
 }
 
-/* News */
+/* Event */
+
+.link-event {
+    color: var(--white-color);
+    text-decoration: none;
+}
 .news-list {
     display: flex;
     width: 100%;
