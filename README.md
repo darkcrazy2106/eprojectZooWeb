@@ -8,10 +8,17 @@ Group 1:
 
 4 collaborators:
 
+<<<<<<< HEAD
 Hoang Ngoc Minh Quy	| Student1345168/n
 Duong Khai Cuong	| Student1341576/n
 Nguyen Dinh Duc Huy | Student1345440/n
 Huynh Nhat Trung | Student1345349/n
+=======
+Hoang Ngoc Minh Quy	| Student1345168
+Duong Khai Cuong	  | Student1341576
+Nguyen Dinh Duc Huy | Student1345440
+Huynh Nhat Trung    | Student1345349
+>>>>>>> 7de3dcdd869e8db849975eccfb55623092521222
 
 ============================
 
