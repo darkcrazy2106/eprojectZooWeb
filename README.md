@@ -9,9 +9,9 @@ Group 1:
 4 collaborators:
 
 Hoang Ngoc Minh Quy	| Student1345168
-Duong Khai Cuong	| Student1341576
+Duong Khai Cuong	  | Student1341576
 Nguyen Dinh Duc Huy | Student1345440
-Huynh Nhat Trung | Student1345349
+Huynh Nhat Trung    | Student1345349
 
 ============================
 
