@@ -23,270 +23,326 @@
     <!-- AgularJS Route -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.min.js"></script>
 
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </head>
 
 <body>
 
-        <div class="container" style="margin: 0px; padding: 0px; max-width: 100%;">
-            <div class="header--navbar">
-                <div header--logo><i class="fa-brands fa-wolf-pack-battalion header--logo-icon"></i></div>
-                <ul class="navbar--list">
-                    <li class="navbar--item"><a class="nav-link" href="..\index.html">Home</a></li>
-                    <li class="navbar--item"><a class="nav-link" href="..\gallery\gallery.html">Gallery</a></li>
-                    <li class="navbar--item"><a class="nav-link" href="../index.html#!/safari">Safari</a></li>
-                    <li class="navbar--item"><a class="nav-link" href="..\event\event.html">Event</a></li>
-                    <li class="navbar--item"><a class="nav-link" href="#/!">Feedback</a></li>
-                    <li class="navbar--item"><a class="nav-link" href="..\contact\contact.html">Contact </a></li>
-                </ul>
-                <div header--login><i class="fa-solid fa-user-large header--login-icon"></i></div>
+    <div class="container" style="margin: 0px; padding: 0px; max-width: 100%;">
+        <div class="header--navbar">
+            <div header--logo><i class="fa-brands fa-wolf-pack-battalion header--logo-icon"></i></div>
+            <ul class="navbar--list">
+                <li class="navbar--item"><a class="nav-link" href="..\index.html">Home</a></li>
+                <li class="navbar--item"><a class="nav-link" href="..\gallery\gallery.html">Gallery</a></li>
+                <li class="navbar--item"><a class="nav-link" href="../index.html#!/safari">Safari</a></li>
+                <li class="navbar--item"><a class="nav-link" href="..\event\event.html">Event</a></li>
+                <li class="navbar--item"><a class="nav-link" href="#/!">Feedback</a></li>
+                <li class="navbar--item"><a class="nav-link" href="..\contact\contact.html">Contact </a></li>
+            </ul>
+            <div header--login>
+
+                <a href="" data-bs-toggle="modal" data-bs-target="#modalForm">
+                    <i class="fa-solid fa-user-large header--login-icon"></i>
+                </a>
+
+
+                <div class="modal fade" id="modalForm" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="mb-3">
+                                        <label class="form-label"
+                                            style="font-weight: 400; font-size: 16px; padding-bottom: 0">Email
+                                            Address</label>
+                                        <input type="text" class="form-control" id="username" name="username"
+                                            placeholder="Username" />
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label"
+                                            style="font-weight: 400; font-size: 16px; padding-bottom: 0;">Password</label>
+                                        <input type="password" class="form-control" id="password" name="password"
+                                            placeholder="Password" />
+                                    </div>
+                                    <div class="mb-3 form-check">
+                                        <input type="checkbox" class="form-check-input" id="rememberMe" />
+                                        <label class="form-check-label" for="rememberMe">Remember me</label>
+                                    </div>
+                                    <div class="modal-footer d-block">
+                                        <p class="float-start">Not yet account <a href="#">Sign Up</a></p>
+                                        <button type="submit" class="btn float-end"
+                                            style="background-color: rgb(0, 59, 23); color: white;">Submit</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="container">
+                <form method="POST" id="signup-form" class="signup-form" enctype="multipart/form-data">
+                    <h3></h3>
+                    <fieldset>
+                        <span class="step-current"> <span class="step-current-content"><span
+                                    class="step-number"><span>01</span>/03</span></span> </span>
+                        <div class="fieldset-flex">
+                            <figure>
+                                <img src="..\image\feedback\signup-img-1.png" alt="">
+                            </figure>
+                            <div class="fieldset-content">
+                                <h2>What do you think about AU services ?</h2>
+                                <div class="form-flex">
+                                    <label for="rating_quanlity">Overall Quality</label>
+                                    <div class="form-rating">
+                                        <input type="radio" id="rating_quanlity_5" name="rating_quanlity"
+                                            value="5" /><label for="rating_quanlity_5" title="Rocks!"></label>
+                                        <input type="radio" id="rating_quanlity_4" name="rating_quanlity"
+                                            value="4" /><label for="rating_quanlity_4" title="Pretty good"></label>
+                                        <input type="radio" id="rating_quanlity_3" name="rating_quanlity"
+                                            value="3" /><label for="rating_quanlity_3" title="Meh"></label>
+                                        <input type="radio" id="rating_quanlity_2" name="rating_quanlity"
+                                            value="2" /><label for="rating_quanlity_2" title="Kinda bad"></label>
+                                        <input type="radio" id="rating_quanlity_1" name="rating_quanlity"
+                                            value="1" /><label for="rating_quanlity_1" title="Sucks big time"></label>
+                                    </div>
+                                </div>
+                                <div class="form-flex">
+                                    <label for="rating_use">Ease of Use</label>
+                                    <div class="form-rating">
+                                        <input type="radio" id="rating_use_5" name="rating_use" value="5" /><label
+                                            for="rating_use_5" title="Rocks!"></label>
+                                        <input type="radio" id="rating_use_4" name="rating_use" value="4" /><label
+                                            for="rating_use_4" title="Pretty good"></label>
+                                        <input type="radio" id="rating_use_3" name="rating_use" value="3" /><label
+                                            for="rating_use_3" title="Meh"></label>
+                                        <input type="radio" id="rating_use_2" name="rating_use" value="2" /><label
+                                            for="rating_use_2" title="Kinda bad"></label>
+                                        <input type="radio" id="rating_use_1" name="rating_use" value="1" /><label
+                                            for="rating_use_1" title="Sucks big time"></label>
+                                    </div>
+                                </div>
+                                <div class="form-flex">
+                                    <label for="rating_features">Features & Functionality</label>
+                                    <div class="form-rating">
+                                        <input type="radio" id="rating_features_5" name="rating_features"
+                                            value="5" /><label for="rating_features_5" title="Rocks!"></label>
+                                        <input type="radio" id="rating_features_4" name="rating_features"
+                                            value="4" /><label for="rating_features_4" title="Pretty good"></label>
+                                        <input type="radio" id="rating_features_3" name="rating_features"
+                                            value="3" /><label for="rating_features_3" title="Meh"></label>
+                                        <input type="radio" id="rating_features_2" name="rating_features"
+                                            value="2" /><label for="rating_features_2" title="Kinda bad"></label>
+                                        <input type="radio" id="rating_features_1" name="rating_features"
+                                            value="1" /><label for="rating_features_1" title="Sucks big time"></label>
+                                    </div>
+                                </div>
+                                <div class="form-flex">
+                                    <label for="rating_support">Custormer Support</label>
+                                    <div class="form-rating">
+                                        <input type="radio" id="rating_support_5" name="rating_support"
+                                            value="5" /><label for="rating_support_5" title="Rocks!"></label>
+                                        <input type="radio" id="rating_support_4" name="rating_support"
+                                            value="4" /><label for="rating_support_4" title="Pretty good"></label>
+                                        <input type="radio" id="rating_support_3" name="rating_support"
+                                            value="3" /><label for="rating_support_3" title="Meh"></label>
+                                        <input type="radio" id="rating_support_2" name="rating_support"
+                                            value="2" /><label for="rating_support_2" title="Kinda bad"></label>
+                                        <input type="radio" id="rating_support_1" name="rating_support"
+                                            value="1" /><label for="rating_support_1" title="Sucks big time"></label>
+                                    </div>
+                                </div>
+                                <div class="form-flex">
+                                    <label for="rating_value">Value of Money</label>
+                                    <div class="form-rating">
+                                        <input type="radio" id="rating_value_5" name="rating_value" value="5" /><label
+                                            for="rating_value_5" title="Rocks!"></label>
+                                        <input type="radio" id="rating_value_4" name="rating_value" value="4" /><label
+                                            for="rating_value_4" title="Pretty good"></label>
+                                        <input type="radio" id="rating_value_3" name="rating_value" value="3" /><label
+                                            for="rating_value_3" title="Meh"></label>
+                                        <input type="radio" id="rating_value_2" name="rating_value" value="2" /><label
+                                            for="rating_value_2" title="Kinda bad"></label>
+                                        <input type="radio" id="rating_value_1" name="rating_value" value="1" /><label
+                                            for="rating_value_1" title="Sucks big time"></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <h3></h3>
+                    <fieldset>
+                        <span class="step-current"><span class="step-current-content"><span
+                                    class="step-number"><span>02</span>/03</span></span></span>
+                        <div class="fieldset-flex">
+                            <figure>
+                                <img src="..\image\feedback\signup-img-2.png" alt="">
+                            </figure>
+                            <div class="fieldset-content">
+                                <div class="form-textarea">
+                                    <label for="your_review" class="form-label">Your Review</label>
+                                    <textarea name="your_review" id="your_review"
+                                        placeholder="Write your comment here"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <h3></h3>
+                    <fieldset>
+                        <span class="step-current"><span class="step-current-content"><span
+                                    class="step-number"><span>03</span>/03</span></span></span>
+                        <div class="fieldset-flex">
+                            <figure>
+                                <img src="..\image\feedback\signup-img-3.png" alt="">
+                            </figure>
+                            <div class="fieldset-content">
+                                <label class="form-label">Enter your information manually below</label>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <input type="text" name="first_name" id="first_name" placeholder="First Name" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="last_name" id="last_name" placeholder="Last Name" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" name="email" id="email" placeholder="Email" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="phone_number" id="phone_number"
+                                        placeholder="Phone number" />
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="text-center text-white">
+            <!-- Grid container -->
+            <div class="p-4">
+                <!-- Section: Social media -->
+                <section class="mb-4">
+                    <!-- Facebook -->
+                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                            class="fab fa-facebook-f"></i></a>
+
+                    <!-- Twitter -->
+                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                            class="fab fa-twitter"></i></a>
+
+                    <!-- Google -->
+                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                            class="fab fa-google"></i></a>
+
+                    <!-- Instagram -->
+                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                            class="fab fa-instagram"></i></a>
+
+                    <!-- Linkedin -->
+                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                            class="fab fa-linkedin-in"></i></a>
+
+                    <!-- Github -->
+                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                            class="fab fa-github"></i></a>
+                </section>
+                <!-- Section: Social media -->
+
+                <!-- Section: Form -->
+                <section class="">
+                    <form action="">
+                        <!--Grid row-->
+                        <div class="row d-flex justify-content-center">
+                            <!--Grid column-->
+                            <div class="col-auto">
+                                <p class="pt-2">
+                                    <strong>Sign up for our newsletter</strong>
+                                </p>
+                            </div>
+                            <!--Grid column-->
+
+                            <!--Grid column-->
+                            <div class="col-md-5 col-12">
+                                <!-- Email input -->
+                                <div class="form-outline form-white mb-4">
+                                    <input type="email" id="form5Example21" class="form-control"
+                                        placeholder="Email address" />
+                                </div>
+                            </div>
+                            <!--Grid column-->
+
+                            <!--Grid column-->
+                            <div class="col-auto">
+                                <!-- Submit button -->
+                                <button type="submit" class="btn btn-outline-light mb-4">
+                                    Subscribe
+                                </button>
+                            </div>
+                            <!--Grid column-->
+                        </div>
+                        <!--Grid row-->
+                    </form>
+                </section>
+                <!-- Section: Form -->
+
+                <!-- Section: Text -->
+                <section class="mb-4">
+                    <p>
+                        TheZoo is the largest online marketplace for African safari tours. Easily compare offers from
+                        top rated tour operators. Make decisions like a pro by using our 65,635 reviews and 216
+                        destination guides. More About Us
+                    </p>
+                </section>
+                <!-- Section: Text -->
+
+                <!-- Section: Links -->
+
             </div>
 
-    <div class="main">
-        <div class="container">
-            <form method="POST" id="signup-form" class="signup-form" enctype="multipart/form-data">
-                <h3></h3>
-                <fieldset>
-                    <span class="step-current"> <span class="step-current-content"><span
-                                class="step-number"><span>01</span>/03</span></span> </span>
-                    <div class="fieldset-flex">
-                        <figure>
-                            <img src="..\image\feedback\signup-img-1.png" alt="">
-                        </figure>
-                        <div class="fieldset-content">
-                            <h2>What do you think about AU services ?</h2>
-                            <div class="form-flex">
-                                <label for="rating_quanlity">Overall Quality</label>
-                                <div class="form-rating">
-                                    <input type="radio" id="rating_quanlity_5" name="rating_quanlity" value="5" /><label
-                                        for="rating_quanlity_5" title="Rocks!"></label>
-                                    <input type="radio" id="rating_quanlity_4" name="rating_quanlity" value="4" /><label
-                                        for="rating_quanlity_4" title="Pretty good"></label>
-                                    <input type="radio" id="rating_quanlity_3" name="rating_quanlity" value="3" /><label
-                                        for="rating_quanlity_3" title="Meh"></label>
-                                    <input type="radio" id="rating_quanlity_2" name="rating_quanlity" value="2" /><label
-                                        for="rating_quanlity_2" title="Kinda bad"></label>
-                                    <input type="radio" id="rating_quanlity_1" name="rating_quanlity" value="1" /><label
-                                        for="rating_quanlity_1" title="Sucks big time"></label>
-                                </div>
-                            </div>
-                            <div class="form-flex">
-                                <label for="rating_use">Ease of Use</label>
-                                <div class="form-rating">
-                                    <input type="radio" id="rating_use_5" name="rating_use" value="5" /><label
-                                        for="rating_use_5" title="Rocks!"></label>
-                                    <input type="radio" id="rating_use_4" name="rating_use" value="4" /><label
-                                        for="rating_use_4" title="Pretty good"></label>
-                                    <input type="radio" id="rating_use_3" name="rating_use" value="3" /><label
-                                        for="rating_use_3" title="Meh"></label>
-                                    <input type="radio" id="rating_use_2" name="rating_use" value="2" /><label
-                                        for="rating_use_2" title="Kinda bad"></label>
-                                    <input type="radio" id="rating_use_1" name="rating_use" value="1" /><label
-                                        for="rating_use_1" title="Sucks big time"></label>
-                                </div>
-                            </div>
-                            <div class="form-flex">
-                                <label for="rating_features">Features & Functionality</label>
-                                <div class="form-rating">
-                                    <input type="radio" id="rating_features_5" name="rating_features" value="5" /><label
-                                        for="rating_features_5" title="Rocks!"></label>
-                                    <input type="radio" id="rating_features_4" name="rating_features" value="4" /><label
-                                        for="rating_features_4" title="Pretty good"></label>
-                                    <input type="radio" id="rating_features_3" name="rating_features" value="3" /><label
-                                        for="rating_features_3" title="Meh"></label>
-                                    <input type="radio" id="rating_features_2" name="rating_features" value="2" /><label
-                                        for="rating_features_2" title="Kinda bad"></label>
-                                    <input type="radio" id="rating_features_1" name="rating_features" value="1" /><label
-                                        for="rating_features_1" title="Sucks big time"></label>
-                                </div>
-                            </div>
-                            <div class="form-flex">
-                                <label for="rating_support">Custormer Support</label>
-                                <div class="form-rating">
-                                    <input type="radio" id="rating_support_5" name="rating_support" value="5" /><label
-                                        for="rating_support_5" title="Rocks!"></label>
-                                    <input type="radio" id="rating_support_4" name="rating_support" value="4" /><label
-                                        for="rating_support_4" title="Pretty good"></label>
-                                    <input type="radio" id="rating_support_3" name="rating_support" value="3" /><label
-                                        for="rating_support_3" title="Meh"></label>
-                                    <input type="radio" id="rating_support_2" name="rating_support" value="2" /><label
-                                        for="rating_support_2" title="Kinda bad"></label>
-                                    <input type="radio" id="rating_support_1" name="rating_support" value="1" /><label
-                                        for="rating_support_1" title="Sucks big time"></label>
-                                </div>
-                            </div>
-                            <div class="form-flex">
-                                <label for="rating_value">Value of Money</label>
-                                <div class="form-rating">
-                                    <input type="radio" id="rating_value_5" name="rating_value" value="5" /><label
-                                        for="rating_value_5" title="Rocks!"></label>
-                                    <input type="radio" id="rating_value_4" name="rating_value" value="4" /><label
-                                        for="rating_value_4" title="Pretty good"></label>
-                                    <input type="radio" id="rating_value_3" name="rating_value" value="3" /><label
-                                        for="rating_value_3" title="Meh"></label>
-                                    <input type="radio" id="rating_value_2" name="rating_value" value="2" /><label
-                                        for="rating_value_2" title="Kinda bad"></label>
-                                    <input type="radio" id="rating_value_1" name="rating_value" value="1" /><label
-                                        for="rating_value_1" title="Sucks big time"></label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </fieldset>
-                <h3></h3>
-                <fieldset>
-                    <span class="step-current"><span class="step-current-content"><span
-                                class="step-number"><span>02</span>/03</span></span></span>
-                    <div class="fieldset-flex">
-                        <figure>
-                            <img src="..\image\feedback\signup-img-2.png" alt="">
-                        </figure>
-                        <div class="fieldset-content">
-                            <div class="form-textarea">
-                                <label for="your_review" class="form-label">Your Review</label>
-                                <textarea name="your_review" id="your_review"
-                                    placeholder="Write your comment here"></textarea>
-                            </div>
-                        </div>
-                    </div>
-                </fieldset>
-                <h3></h3>
-                <fieldset>
-                    <span class="step-current"><span class="step-current-content"><span
-                                class="step-number"><span>03</span>/03</span></span></span>
-                    <div class="fieldset-flex">
-                        <figure>
-                            <img src="..\image\feedback\signup-img-3.png" alt="">
-                        </figure>
-                        <div class="fieldset-content">
-                            <label class="form-label">Enter your information manually below</label>
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <input type="text" name="first_name" id="first_name" placeholder="First Name" />
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" name="last_name" id="last_name" placeholder="Last Name" />
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <input type="email" name="email" id="email" placeholder="Email" />
-                            </div>
-                            <div class="form-group">
-                                <input type="text" name="phone_number" id="phone_number" placeholder="Phone number" />
-                            </div>
-                        </div>
-                    </div>
-                </fieldset>
-            </form>
-        </div>
-    </div>
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                © 2022 Copyright:
+                <a class="text-white" href="" style="text-decoration: none; cursor: none;"> DESIGN BY TEAM 1
+                    T1.2110.E1</a>
+            </div>
 
-    <!-- Footer -->
-    <footer class="text-center text-white">
-        <!-- Grid container -->
-        <div class="p-4">
-            <!-- Section: Social media -->
-            <section class="mb-4">
-                <!-- Facebook -->
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
-                        class="fab fa-facebook-f"></i></a>
-
-                <!-- Twitter -->
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
-                        class="fab fa-twitter"></i></a>
-
-                <!-- Google -->
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
-                        class="fab fa-google"></i></a>
-
-                <!-- Instagram -->
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
-                        class="fab fa-instagram"></i></a>
-
-                <!-- Linkedin -->
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
-                        class="fab fa-linkedin-in"></i></a>
-
-                <!-- Github -->
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
-                        class="fab fa-github"></i></a>
-            </section>
-            <!-- Section: Social media -->
-
-            <!-- Section: Form -->
-            <section class="">
-                <form action="">
-                    <!--Grid row-->
-                    <div class="row d-flex justify-content-center">
-                        <!--Grid column-->
-                        <div class="col-auto">
-                            <p class="pt-2">
-                                <strong>Sign up for our newsletter</strong>
-                            </p>
-                        </div>
-                        <!--Grid column-->
-
-                        <!--Grid column-->
-                        <div class="col-md-5 col-12">
-                            <!-- Email input -->
-                            <div class="form-outline form-white mb-4">
-                                <input type="email" id="form5Example21" class="form-control" placeholder="Email address" />
-                            </div>
-                        </div>
-                        <!--Grid column-->
-
-                        <!--Grid column-->
-                        <div class="col-auto">
-                            <!-- Submit button -->
-                            <button type="submit" class="btn btn-outline-light mb-4">
-                                Subscribe
-                            </button>
-                        </div>
-                        <!--Grid column-->
-                    </div>
-                    <!--Grid row-->
-                </form>
-            </section>
-            <!-- Section: Form -->
-
-            <!-- Section: Text -->
-            <section class="mb-4">
-                <p>
-                     TheZoo is the largest online marketplace for African safari tours. Easily compare offers from top rated tour operators. Make decisions like a pro by using our 65,635 reviews and 216 destination guides. More About Us
-                </p>
-            </section>
-            <!-- Section: Text -->
-
-            <!-- Section: Links -->
-           
-        </div>
-
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-            © 2022 Copyright:
-            <a class="text-white" href="" style="text-decoration: none; cursor: none;"> DESIGN BY TEAM 1 T1.2110.E1</a>
-        </div>
- 
-    </footer>
+        </footer>
 
 
-    <script src="jquery.min.js"></script>
-    <script src="jquery.validate.min.js"></script>
-    <script src="additional-methods.min.js"></script>
-    <script src="jquery.step.min.js"></script>
-    <script src="feedback.js"></script>
+        <script src="jquery.min.js"></script>
+        <script src="jquery.validate.min.js"></script>
+        <script src="additional-methods.min.js"></script>
+        <script src="jquery.step.min.js"></script>
+        <script src="feedback.js"></script>
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
 
-        gtag('config', 'UA-23581568-13');
-    </script>
-    <script defer
-        src="https://static.cloudflareinsights.com/beacon.min.js/v652eace1692a40cfa3763df669d7439c1639079717194"
-        integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw=="
-        data-cf-beacon='{"rayId":"6ddcf9a9591a49cc","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2021.12.0","si":100}'
-        crossorigin="anonymous"></script>
+            gtag('config', 'UA-23581568-13');
+        </script>
+        <script defer
+            src="https://static.cloudflareinsights.com/beacon.min.js/v652eace1692a40cfa3763df669d7439c1639079717194"
+            integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw=="
+            data-cf-beacon='{"rayId":"6ddcf9a9591a49cc","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2021.12.0","si":100}'
+            crossorigin="anonymous"></script>
 </body>
 
 </html>
